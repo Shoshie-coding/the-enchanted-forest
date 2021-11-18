@@ -1,3 +1,5 @@
+import time 
+
 # This is the start game function that also acts as an intro for the game
 
 def start_game():
@@ -8,7 +10,7 @@ def start_game():
 ''')
     
     # This takes user to the beginning of the game
-    answer = input("Are you ready to start the game. Type y to start the game and n to end it.\n").lower().strip()
+    answer = input("Type y to start the game and n to end it.\n").lower().strip()
     if answer == "y":
         print("You made the right choice!")
         time.sleep(2)
@@ -26,18 +28,35 @@ def start_game():
 
     
 def game_intro():
-    print("Welcome to the Enchanted Forest")
-    print("\n The year is 1290, you are on the outskirts of the forest")
+    print("\nWelcome to the Enchanted Forest!")
+    print("The year is 1290, you are on the outskirts of the forest")
     print("You are picking mushrooms and berries")
     print("You are going further into the forest") 
     print("You don't realize it now but you are straying")
-    print("away from your village")
+    print("Away from your village")
     print("\nAfter a long time has passed, you try to get back to your village")
     print("You walk and realize that you are deep into the forest")
-    print("Now you need to find a way out before it gets too dark and before the sun sets")
+    print("And you don't know how to get back anymore")
+    print("Now you need to find a way out before the sun sets")
     print("You need to follow the prompts on the screen")
-    print("And make the right choice")
+    print("Press c to continue the game and q to quit")
+
+    answer = input(">\n").lower().strip()
+
+    if answer == "c":
+        time.sleep(2)
+        print("Call function two_paths()")
     
+    elif answer == "q":
+        start_game()
+
+    else:
+        #Let user know the answer is incorrect and take user to the start of the game
+        print("This is an incorrect answer")
+        print("You need to chose yes or no")
+        start_game()
+
+ 
 def two_paths():
     print("\nYou come at a crossroads")
     print("There are two paths - you need to chose one of these")
@@ -52,14 +71,17 @@ def two_paths():
 
     answer = input("Which path will you chose? Type l for left and r for right").lower().strip()
     if answer == "l":
-        meet_fairy()
+        print("Call function meet_fairy()")
     elif answer == "r":
-        meet_wild_stag
+        print("Call function meet_wild_stag()")
     else:
-         #Let user know the answer is incorrect
+        #Let user know the answer is incorrect
         print("This is an incorrect answer")
         print("You need to chose yes or no")
         start_game()
+
+
+start_game()
 
 
 
