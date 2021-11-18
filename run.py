@@ -19,6 +19,7 @@ def start_game():
     elif answer =="n":
         print("It seems you weren't brave enough to play the game.")
         print("Now you can wake up, it was all a dream")
+        game_over(reason)
        
     else:
         #Let user know the answer is incorrect
@@ -45,7 +46,7 @@ def game_intro():
 
     if answer == "c":
         time.sleep(2)
-        print("Call function two_paths()")
+        two_paths()
     
     elif answer == "q":
         start_game()
@@ -69,9 +70,9 @@ def two_paths():
     print("On the upside, the path is well lit, you can see where you're walking")
     time.sleep(2)
 
-    answer = input("Which path will you chose? Type l for left and r for right").lower().strip()
+    answer = input("Which path will you chose? Type l for left and r for right\n").lower().strip()
     if answer == "l":
-        print("Call function meet_fairy()")
+        meet_fairy()
     elif answer == "r":
         print("Call function meet_wild_stag()")
     else:
@@ -79,6 +80,39 @@ def two_paths():
         print("This is an incorrect answer")
         print("You need to chose yes or no")
         start_game()
+
+def meet_fairy():
+    print("After walking around half an hour")
+    print("You meet a fairy")
+    print("She's sitting on a tree log, playing a harph")
+    print("She lights up everything around her")
+    print("It's getting dark, and she offers to lead you through the forest")
+    
+    answer = input("Which will you chose? Type lantern or fairy to select your choice.\n").lower().strip()
+    if answer == "lantern":
+        game_over("You cannot survice alone in the forest")
+    elif answer == "fairy":
+        print("Fantastic choice, the forest fairies will always guide you find your way home")
+    else:
+        #Let user know the answer is incorrect
+        print("This is an incorrect answer")
+        print("You need to chose yes or no")
+        start_game()
+
+def game_over():
+    print("\n" + "reason")
+    print("Game over!")
+    answer = input("Do you want to play again. Type y to play again")
+    if answer == "y":
+        start_game()
+    else:  
+        #Let user know the answer is incorrect
+        print("This is an incorrect answer")
+        print("You need to chose yes or no")
+        start_game()
+
+    start_game()
+
 
 
 start_game()
