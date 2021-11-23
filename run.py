@@ -1,4 +1,15 @@
 import time 
+import.os 
+
+
+def clear_terminal():
+    """
+    Code for clearing the terminal
+    Credit to Stack Overflow 
+    https://stackoverflow.com/questions/517970/how-to-clear-the-interpreter-console
+    """
+    os.system('cls' if os.name=='nt' else 'clear')
+
 
 # This is the start game function that also acts as an intro for the game
 def start_game():
@@ -15,6 +26,7 @@ def start_game():
     answer = input(f"Hello {select_name}, welcome to the Enchanted forest!\nType y to start the game and n to end it.\n").strip()
     if answer == "y":
         print("You made the right choice!")
+        clear_terminal()
         time.sleep(2)
         game_intro()
         
