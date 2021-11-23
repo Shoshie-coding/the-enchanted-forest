@@ -1,5 +1,5 @@
 import time 
-import.os 
+import os 
 
 
 def clear_terminal():
@@ -32,6 +32,7 @@ def start_game():
         
     elif answer =="n":
         print("Now you can wake up, it was all a dream")
+        print("\nThe game is over")
         game_over()
 
     else:
@@ -58,6 +59,7 @@ def game_intro():
 
     if answer == "c":
         time.sleep(2)
+        clear_terminal()
         two_paths()
     
     elif answer == "q":
@@ -117,6 +119,7 @@ def meet_fairy():
         start_game()
 
 
+
 def meet_redhead_woman():
     print("The fairy brings you to a clearing in the forest")
     print("You continue your journey through the woods,")
@@ -131,7 +134,6 @@ def meet_redhead_woman():
     print("You have 2 options, type basket to east the contents of the basket")
     print("Type honey to eat the honey")
     
-
 
 
 def game_over():
