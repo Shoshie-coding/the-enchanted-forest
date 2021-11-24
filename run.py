@@ -14,9 +14,6 @@ def clear_terminal():
 # This is the start game function that also acts as an intro for the game
 def start_game():
     print('''
- +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
- |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
- +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
             .        +          .      .          .
   ,              /;-._,-.____        ,-----.__
  ((        .    (_:#::_.:::. `-._   /:, /-._, `._,
@@ -42,6 +39,11 @@ def start_game():
 ''')
     # This takes user to type their name
     select_name = input("Type your name or username to start the game\n").strip()
+    print("""
++-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
+          |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
++-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
+    """)
     answer = input(f"Hello {select_name}, welcome to the Enchanted forest!\nType y to start the game and n to end it.\n").strip()
     if answer == "y":
         print("You made the right choice!")
@@ -58,7 +60,6 @@ def start_game():
         print("You need to chose yes or no y/n")
         start_game()
 
-    
 def game_intro():
     print("\nThe year is 1290, you are on the outskirts of the forest")
     time.sleep(2)
@@ -84,8 +85,11 @@ def game_intro():
     if answer == "c":
         time.sleep(2)
         clear_terminal()
+        print("I see you're brave enough to continue the game!")
         two_paths()
+
     elif answer == "q":
+        print("Sorry to see you go!")
         game_over()
     else:
         """
@@ -111,7 +115,7 @@ def two_paths():
         print("Excellent choice!")
         clear_terminal()
         meet_fairy()
-    elif answer == "r2":
+    elif answer == "2":
         print("Call function meet_wild_stag()")
     else:
         #Let user know the answer is incorrect
@@ -121,16 +125,19 @@ def two_paths():
 
 def meet_fairy():
     print("After walking around half an hour")
-    print("You meet a fairy")
-    print("She's sitting on a tree log, playing a harph")
+    print("You meet a fairy. She's sitting on a tree log, playing a harph")
     print("She lights up everything around her")
     print("It's getting dark, and she offers to lead you through the forest")
+    print("You see a big torch on the ground")
 
-    
-    answer = input("Which will you chose? Type lantern or fairy to select your choice.\n").lower().strip()
-    if answer == "lantern":
-        game_over("You cannot survive alone in the forest")
-    elif answer == "fairy":
+    answer = input("Which will you chose to guide you home? Type 1 for lantern or 2 for fairy.\n").lower().strip()
+    clear_terminal()
+    if answer == "1":
+        print("This is an unfortunate choice. You cannot survive alone in the forest")
+        print("You meet a bear and wrestle with him and die")
+        game_over()
+        play_again()
+    elif answer == "2":
         print("Fantastic choice, the forest fairies will always guide you find your way home")
         meet_redhead_woman()
     else:
@@ -151,8 +158,22 @@ def meet_redhead_woman():
     print("You see a young woman with long red hair")
     print("She's holding a basket with fruits and meat pies in it")
     print("You also see a beehive with honey in it")
-    print("You have 2 options, type basket to east the contents of the basket")
-    print("Type honey to eat the honey")
+
+    answer = input("Which do you chose? 1 - eat what's in the basket or 2 - eat the honey")
+    if answer == "1":
+        print("This is a bad choice. The readhead woman transforms into a witch.")
+        print("The food from the basket was poisoned")
+        print("You soon get sick and die")
+        game_over()
+        play_again()
+
+    elif answer == "2":
+        print("Great choice!")
+        print("The honey is nutritious and will give you enough energy to continue your trip")
+        
+
+
+
 
 def meet_knight():
     print("You walk further along the path")
@@ -161,6 +182,7 @@ def meet_knight():
     print("The knight asks you who you are and what you're doing in the forest")
     print("You tell the knight you're trying to get home")
     print("The knight gives you two options")
+    print("Option #1: You can ")
     
 
 
