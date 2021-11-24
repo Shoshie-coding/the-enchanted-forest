@@ -17,24 +17,45 @@ def start_game():
  +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
  |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
  +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-''')
 
-    
+            .        +          .      .          .
+     .            _        .                    .
+  ,              /;-._,-.____        ,-----.__
+ ((        .    (_:#::_.:::. `-._   /:, /-._, `._,
+  `                 \   _|`"=:_::.`.);  \ __/ /
+                      ,    `./  \:. `.   )==-'  .
+    .      ., ,-=-.  ,\, +#./`   \:.  / /           .
+.           \/:/`-' , ,\ '` ` `   ): , /_  -o
+       .    /:+- - + +- : :- + + -:'  /(o-) \)     .
+  .      ,=':  \    ` `/` ' , , ,:' `'--".--"---._/`7
+   `.   (    \: \,-._` ` + '\, ,"   _,--._,---":.__/
+              \:  `  X` _| _,\/'   .-'
+.               ":._:`\____  /:'  /      .           .
+                    \::.  :\/:'  /              +
+   .                 `.:.  /:'  }      .
+           .           ):_(:;   \           .
+                      /:. _/ ,  |
+                   . (|::.     ,`                  .
+     .                |::.    {\
+                      |::.\  \ `.
+                      |:::(\    |
+              O       |:::/{ }  |                  (o
+               )  ___/#\::`/ (O "==._____   O, (O  /`
+          ~~~w/w~"~~,\` `:/,-(~`"~~~~~~~~"~o~\~/~w|/~
+          ~~~~~~~~~~~~~~~~~~~~~~~\\W~~~~~~~~~~~~\|/~~
+''')
     # This takes user to type their name
     select_name = input("Type your name or username to start the game\n").strip()
-       
     answer = input(f"Hello {select_name}, welcome to the Enchanted forest!\nType y to start the game and n to end it.\n").strip()
     if answer == "y":
         print("You made the right choice!")
         clear_terminal()
         game_intro()
-        
     elif answer == "n":
         clear_terminal()
         print("Now you can wake up, it was all a dream.")
         game_over()
         play_again()
-
     else:
         #Let user know the answer is incorrect
         print("This is an incorrect answer")
@@ -44,26 +65,32 @@ def start_game():
     
 def game_intro():
     print("\nThe year is 1290, you are on the outskirts of the forest")
+    time.sleep(2)
     print("You are picking mushrooms and berries")
+    time.sleep(2)
     print("You are going further into the forest") 
+    time.sleep(2)
     print("and you are straying away from your village")
+    time.sleep(2)
     print("After two hours, you want to go back home")
+    time.sleep(2)
     print("You start walking back and realize that you are deep into the forest")
+    time.sleep(2)
     print("And you don't know how to get back anymore")
+    time.sleep(2)
     print("Now you need to find a way out before the sun sets")
+    time.sleep(2)
     print("You need to follow the prompts on the screen to play this game")
+    time.sleep(2)
     print("Press c to continue the game and q to quit")
 
     answer = input("\n").lower().strip()
-
     if answer == "c":
         time.sleep(2)
         clear_terminal()
         two_paths()
-    
     elif answer == "q":
         game_over()
-
     else:
         """
         Let user know the answer is incorrect and takes 
@@ -73,23 +100,22 @@ def game_intro():
         print("You need to chose yes or no")
         start_game()
 
- 
 def two_paths():
-    print("\nYou come at a crossroads and you see twp paths")
-    print("You need to chose one of these")
-    print("Go left to the straigh path across the forest")
-    print("This path is lined with trees and it's not well lit")
-    print("The second path is on the right")
-    print("This path takes you on a narrow road down the slope in the mountains")
-    print("You need to be careful walking on this path")
-    print("There are rocks and tree branches everywhere")
+    print("\nYou come at a crossroads and you see two paths")
+    print("Path number 1: Go on the straigh path across the forest")
+    print("This path is lined with trees and it's @not well lit")
+    print("But it's very easy to walk on this path")
+    print("Path number 2: this takes you on a narrow road down the slope in the mountains")
+    print("There are rocks and tree branches everywhere on this second path")
     print("On the upside, the path is well lit, you can see where you're walking")
     time.sleep(2)
 
-    answer = input("Which path will you chose? Type l for left and r for right\n").lower().strip()
-    if answer == "l":
+    answer = input("Which path will you chose? Type 1 or 2\n").lower().strip()
+    if answer == "1":
+        print("Excellent choice!")
+        clear_terminal()
         meet_fairy()
-    elif answer == "r":
+    elif answer == "r2":
         print("Call function meet_wild_stag()")
     else:
         #Let user know the answer is incorrect
@@ -131,6 +157,14 @@ def meet_redhead_woman():
     print("You also see a beehive with honey in it")
     print("You have 2 options, type basket to east the contents of the basket")
     print("Type honey to eat the honey")
+
+def meet_knight():
+    print("You walk further along the path")
+    print("You see a knight in his shiny armour mounted on his black horse")
+    print("You know that it's the knights job to maintain law and order")
+    print("The knight asks you who you are and what you're doing in the forest")
+    print("You tell the knight you're trying to get home")
+    print("The knight gives you two options")
     
 
 
@@ -149,6 +183,7 @@ def game_over():
 def play_again():
     answer = input("Do you want to play again?\n Y / N\n").lower()
     if answer == "y":
+        clear_terminal()
         start_game()
     elif answer == 'n':
         print("""
@@ -169,7 +204,6 @@ def play_again():
         start_game()
 
     
-
 
 start_game()
 
