@@ -27,13 +27,13 @@ def start_game():
     if answer == "y":
         print("You made the right choice!")
         clear_terminal()
-        time.sleep(2)
         game_intro()
         
-    elif answer =="n":
-        print("Now you can wake up, it was all a dream")
-        print("\nThe game is over")
+    elif answer == "n":
+        clear_terminal()
+        print("Now you can wake up, it was all a dream.")
         game_over()
+        play_again()
 
     else:
         #Let user know the answer is incorrect
@@ -46,16 +46,15 @@ def game_intro():
     print("\nThe year is 1290, you are on the outskirts of the forest")
     print("You are picking mushrooms and berries")
     print("You are going further into the forest") 
-    print("You don't realize it now but you are straying")
-    print("Away from your village")
-    print("\nAfter a long time has passed, you try to get back to your village")
-    print("You walk and realize that you are deep into the forest")
+    print("and you are straying away from your village")
+    print("After two hours, you want to go back home")
+    print("You start walking back and realize that you are deep into the forest")
     print("And you don't know how to get back anymore")
     print("Now you need to find a way out before the sun sets")
-    print("You need to follow the prompts on the screen")
+    print("You need to follow the prompts on the screen to play this game")
     print("Press c to continue the game and q to quit")
 
-    answer = input(">\n").lower().strip()
+    answer = input("\n").lower().strip()
 
     if answer == "c":
         time.sleep(2)
@@ -63,7 +62,7 @@ def game_intro():
         two_paths()
     
     elif answer == "q":
-        start_game()
+        game_over()
 
     else:
         """
@@ -119,7 +118,6 @@ def meet_fairy():
         start_game()
 
 
-
 def meet_redhead_woman():
     print("The fairy brings you to a clearing in the forest")
     print("You continue your journey through the woods,")
@@ -137,15 +135,37 @@ def meet_redhead_woman():
 
 
 def game_over():
-    print("\n" + "reason")
-    print("Game over!")
-    answer = input("Do you want to play again. Type y to play again")
+    print("""
+   _____                                            _ 
+  / ____|                                          | |
+ | |  __  __ _ _ __ ___   ___    _____   _____ _ __| |
+ | | |_ |/ _` | '_ ` _ \ / _ \  / _ \ \ / / _ \ '__| |
+ | |__| | (_| | | | | | |  __/ | (_) \ V /  __/ |  |_|
+  \_____|\__,_|_| |_| |_|\___|  \___/ \_/ \___|_|  (_)
+
+  """)
+                                                      
+                                                      
+def play_again():
+    answer = input("Do you want to play again?\n Y / N\n").lower()
     if answer == "y":
         start_game()
+    elif answer == 'n':
+        print("""
+  _____ _                 _           __                    _             _             _ 
+ |_   _| |__   __ _ _ __ | | _____   / _| ___  _ __   _ __ | | __ _ _   _(_)_ __   __ _| |
+   | | | '_ \ / _` | '_ \| |/ / __| | |_ / _ \| '__| | '_ \| |/ _` | | | | | '_ \ / _` | |
+   | | | | | | (_| | | | |   <\__ \ |  _| (_) | |    | |_) | | (_| | |_| | | | | | (_| |_|
+   |_| |_| |_|\__,_|_| |_|_|\_\___/ |_|  \___/|_|    | .__/|_|\__,_|\__, |_|_| |_|\__, (_)
+                                                     |_|            |___/         |___/   
+    """)  
+
     else:  
         #Let user know the answer is incorrect
         print("This is an incorrect answer")
-        print("You need to chose yes or no")
+        print("You need to type Y or N")
+        print("You will now be directed to the beginning of the game")
+        clear_terminal()
         start_game()
 
     
