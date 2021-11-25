@@ -43,12 +43,12 @@ def start_game():
 ''')
     # This takes user to type their name
     select_name = input(f"{Fore.MAGENTA}Type your name or username to start the game\n").strip()
-    print(Fore.MAGENTA + """
+    print(Fore.GREEN + """
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
           |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
     """)
-    answer = input(f"Hello {select_name}, welcome to the Enchanted forest!\nType y to start the game and n to end it.\n").strip()
+    answer = input(f"{Fore.MAGENTA}Hello {select_name}, welcome to the Enchanted forest!\nType y to start the game and n to end it.\n").strip()
     if answer == "y":
         print(f"{Fore.GREEN}You made the right choice!") 
         clear_terminal()
@@ -61,9 +61,9 @@ def start_game():
     else:
         #Let user know the answer is incorrect
         clear_terminal()
-        print("This is an incorrect answer")
+        print(f"{Fore.RED}This is an incorrect answer")
         time.sleep(2)
-        answer = input("You need to type Y or N\n")
+        answer = input(f"{Fore.RED}You need to type Y or N.\n")
         if answer == "y":
             print(f"{Fore.GREEN}You made the right choice!") 
             clear_terminal()
@@ -74,7 +74,7 @@ def start_game():
             game_over()
         else:
             #Let user know the answer is incorrect
-            print("This is an incorrect answer")
+            print(f"{Fore.RED}This is an incorrect answer.")
             print("Taking you to the beginning of the game")
             start_game()
         
@@ -97,14 +97,12 @@ def game_intro():
     time.sleep(2)
     print(f"{Fore.CYAN}You need to follow the prompts on the screen to play this game")
     time.sleep(2)
-
     print(f"{Fore.MAGENTA}Press c to continue the game and q to quit")
-
     answer = input("\n").lower().strip()
     if answer == "c":
         time.sleep(2)
         clear_terminal()
-        print("Great, you're brave enough to continue the game!")
+        print(f"{Fore.GREEN}Great, you're brave enough to continue the game!")
         two_paths()
 
     elif answer == "q":
@@ -121,18 +119,18 @@ def game_intro():
         start_game()
 
 def two_paths():
-    print("\nYou come at a crossroads and you see two paths")
-    print("Path number 1: Go on the straigh path across the forest")
-    print("This path is lined with trees and it's @not well lit")
-    print("But it's very easy to walk on this path")
+    print(f"{Fore.CYAN}\nYou come at a crossroads and you see two paths")
+    print(f"{Fore.CYAN}Path number 1: Go on the straigh path across the forest")
+    print(f"{Fore.CYAN}This path is lined with trees and it's @not well lit")
+    print(f"{Fore.CYAN}But it's very easy to walk on this path")
     time.sleep(2)
 
-    print("Path number 2: this takes you on a narrow road down the slope in the mountains")
-    print("There are rocks and tree branches everywhere on this second path")
-    print("On the upside, the path is well lit, you can see where you're walking")
+    print(f"{Fore.CYAN}Path number 2: this takes you on a narrow road down the slope in the mountains")
+    print(f"{Fore.CYAN}There are rocks and tree branches everywhere on this second path")
+    print(f"{Fore.CYAN}On the upside, the path is well lit, you can see where you're walking")
     time.sleep(2)
 
-    answer = input("Which path will you chose? Type 1 or 2\n").lower().strip()
+    answer = input(f"{Fore.MAGENTA}Which path will you chose? Type 1 or 2\n").lower().strip()
     if answer == "1":
         print("Excellent choice!")
         clear_terminal()
@@ -228,12 +226,12 @@ def play_again():
         start_game()
     elif answer == 'n':
         print(Fore.GREEN + """
-  _____ _                 _           __                    _             _             _ 
- |_   _| |__   __ _ _ __ | | _____   / _| ___  _ __   _ __ | | __ _ _   _(_)_ __   __ _| |
-   | | | '_ \ / _` | '_ \| |/ / __| | |_ / _ \| '__| | '_ \| |/ _` | | | | | '_ \ / _` | |
-   | | | | | | (_| | | | |   <\__ \ |  _| (_) | |    | |_) | | (_| | |_| | | | | | (_| |_|
-   |_| |_| |_|\__,_|_| |_|_|\_\___/ |_|  \___/|_|    | .__/|_|\__,_|\__, |_|_| |_|\__, (_)
-                                                     |_|            |___/         |___/   
+                                                                     __ 
+ _____ _           _          ___                _         _        |  |
+|_   _| |_ ___ ___| |_ ___   |  _|___ ___    ___| |___ _ _|_|___ ___|  |
+  | | |   | .'|   | '_|_ -|  |  _| . |  _|  | . | | .'| | | |   | . |__|
+  |_| |_|_|__,|_|_|_,_|___|  |_| |___|_|    |  _|_|__,|_  |_|_|_|_  |__|
+                                            |_|       |___|     |___|   
     """)  
 
     else:  
