@@ -1,6 +1,10 @@
 import time 
 import os 
 
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
+
 
 def clear_terminal():
     """
@@ -38,7 +42,7 @@ def start_game():
           ~~~w/w~"~~,\` `:/,-(~`"~~~~~~~~"~o~\~/~w|/
 ''')
     # This takes user to type their name
-    select_name = input("Type your name or username to start the game\n").strip()
+    select_name = input(f"{Fore.CYAN}Type your name or username to start the game\n").strip()
     print("""
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
           |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
@@ -57,7 +61,11 @@ def start_game():
     else:
         #Let user know the answer is incorrect
         print("This is an incorrect answer")
-        print("You need to chose yes or no y/n")
+        time.sleep(2)
+        print("You need to type Y or N")
+        time.sleep(2)
+        print("You will now be directed to the beginning of the game")
+        time.sleep(2)
         start_game()
 
 def game_intro():
@@ -91,6 +99,7 @@ def game_intro():
     elif answer == "q":
         print("Sorry to see you go!")
         game_over()
+    
     else:
         """
         Let user know the answer is incorrect and takes 
@@ -105,6 +114,8 @@ def two_paths():
     print("Path number 1: Go on the straigh path across the forest")
     print("This path is lined with trees and it's @not well lit")
     print("But it's very easy to walk on this path")
+    time.sleep(2)
+
     print("Path number 2: this takes you on a narrow road down the slope in the mountains")
     print("There are rocks and tree branches everywhere on this second path")
     print("On the upside, the path is well lit, you can see where you're walking")
@@ -116,7 +127,9 @@ def two_paths():
         clear_terminal()
         meet_fairy()
     elif answer == "2":
-        print("Call function meet_wild_stag()")
+        print("This is a good choice as well but let's see where it takes you")
+        clear_terminal()
+        meet_stag()
     else:
         #Let user know the answer is incorrect
         print("This is an incorrect answer")
@@ -145,6 +158,9 @@ def meet_fairy():
         print("This is an incorrect answer")
         print("You need to chose yes or no")
         start_game()
+
+
+
 
 
 def meet_redhead_woman():
