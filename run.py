@@ -93,7 +93,7 @@ def game_intro():
     if answer == "c":
         time.sleep(2)
         clear_terminal()
-        print("I see you're brave enough to continue the game!")
+        print("Great, you're brave enough to continue the game!")
         two_paths()
 
     elif answer == "q":
