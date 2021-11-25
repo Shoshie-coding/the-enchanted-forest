@@ -42,15 +42,15 @@ def start_game():
           ~~~w/w~"~~,\` `:/,-(~`"~~~~~~~~"~o~\~/~w|/
 ''')
     # This takes user to type their name
-    select_name = input(f"{Fore.CYAN}Type your name or username to start the game\n").strip()
-    print("""
+    select_name = input(f"{Fore.MAGENTA}Type your name or username to start the game\n").strip()
+    print(Fore.MAGENTA + """
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
           |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
     """)
     answer = input(f"Hello {select_name}, welcome to the Enchanted forest!\nType y to start the game and n to end it.\n").strip()
     if answer == "y":
-        print("You made the right choice!")
+        print(f"{Fore.GREEN}You made the right choice!") 
         clear_terminal()
         game_intro()
     elif answer == "n":
@@ -60,34 +60,50 @@ def start_game():
         play_again()
     else:
         #Let user know the answer is incorrect
+        clear_terminal()
         print("This is an incorrect answer")
         time.sleep(2)
         print("You need to type Y or N")
         time.sleep(2)
+        if answer == "y":
+            print(f"{Fore.GREEN}You made the right choice!") 
+            clear_terminal()
+            game_intro()
+        elif answer == "n":
+            clear_terminal()
+            print("Now you can wake up, it was all a dream.")
+            game_over()
+            play_again()
+        else:
+            #Let user know the answer is incorrect
+            print("This is an incorrect answer")
+            print("Taking you to the beginning of the game")
+            start_game()
         print("You will now be directed to the beginning of the game")
         time.sleep(2)
         start_game()
 
 def game_intro():
-    print("\nThe year is 1290, you are on the outskirts of the forest")
+    print(f"{Fore.CYAN}\nThe year is 1290, you are on the outskirts of the forest")
     time.sleep(2)
-    print("You are picking mushrooms and berries")
+    print(f"{Fore.CYAN}You are picking mushrooms and berries")
     time.sleep(2)
-    print("You are going further into the forest") 
+    print(f"{Fore.CYAN}You are going further into the forest") 
     time.sleep(2)
-    print("and you are straying away from your village")
+    print(f"{Fore.CYAN}And you are straying away from your village")
     time.sleep(2)
-    print("After two hours, you want to go back home")
+    print(f"{Fore.CYAN}After two hours, you want to go back home")
     time.sleep(2)
-    print("You start walking back and realize that you are deep into the forest")
+    print(f"{Fore.CYAN}You start walking back and realize that you are deep into the forest")
     time.sleep(2)
-    print("And you don't know how to get back anymore")
+    print(f"{Fore.CYAN}And you don't know how to get back anymore")
     time.sleep(2)
-    print("Now you need to find a way out before the sun sets")
+    print(f"{Fore.CYAN}Now you need to find a way out before the sun sets")
     time.sleep(2)
-    print("You need to follow the prompts on the screen to play this game")
+    print(f"{Fore.CYAN}You need to follow the prompts on the screen to play this game")
     time.sleep(2)
-    print("Press c to continue the game and q to quit")
+
+    print(f"{Fore.MAGENTA}Press c to continue the game and q to quit")
 
     answer = input("\n").lower().strip()
     if answer == "c":
@@ -161,8 +177,6 @@ def meet_fairy():
 
 
 
-
-
 def meet_redhead_woman():
     print("The fairy brings you to a clearing in the forest")
     print("You continue your journey through the woods,")
@@ -187,8 +201,6 @@ def meet_redhead_woman():
         print("Great choice!")
         print("The honey is nutritious and will give you enough energy to continue your trip")
         
-
-
 
 
 def meet_knight():
@@ -237,6 +249,13 @@ def play_again():
         clear_terminal()
         start_game()
 
+def incorrect_answer():
+    """
+    This function lets user know that their answer is incorrect
+    and give them instructions on what they need to do. 
+    If the user gives an incorrect answer again, they are redirrected 
+    to the game_intro()
+    """
     
 
 start_game()
