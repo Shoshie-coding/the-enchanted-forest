@@ -17,7 +17,7 @@ def clear_terminal():
 
 # This is the start game function that also acts as an intro for the game
 def start_game():
-    print('''
+    print(Fore.GREEN + '''
             .        +          .      .          .
   ,              /;-._,-.____        ,-----.__
  ((        .    (_:#::_.:::. `-._   /:, /-._, `._,
@@ -63,8 +63,7 @@ def start_game():
         clear_terminal()
         print("This is an incorrect answer")
         time.sleep(2)
-        print("You need to type Y or N")
-        time.sleep(2)
+        answer = input("You need to type Y or N\n")
         if answer == "y":
             print(f"{Fore.GREEN}You made the right choice!") 
             clear_terminal()
@@ -73,16 +72,12 @@ def start_game():
             clear_terminal()
             print("Now you can wake up, it was all a dream.")
             game_over()
-            play_again()
         else:
             #Let user know the answer is incorrect
             print("This is an incorrect answer")
             print("Taking you to the beginning of the game")
             start_game()
-        print("You will now be directed to the beginning of the game")
-        time.sleep(2)
-        start_game()
-
+        
 def game_intro():
     print(f"{Fore.CYAN}\nThe year is 1290, you are on the outskirts of the forest")
     time.sleep(2)
@@ -214,16 +209,16 @@ def meet_knight():
     
 
 
-def game_over():
-    print("""
-   _____                                            _ 
-  / ____|                                          | |
- | |  __  __ _ _ __ ___   ___    _____   _____ _ __| |
- | | |_ |/ _` | '_ ` _ \ / _ \  / _ \ \ / / _ \ '__| |
- | |__| | (_| | | | | | |  __/ | (_) \ V /  __/ |  |_|
-  \_____|\__,_|_| |_| |_|\___|  \___/ \_/ \___|_|  (_)
+def game_over():    
+    print(Fore.RED + """
+    _____                                            _ 
+    / ____|                                          | |
+    | |  __  __ _ _ __ ___   ___    _____   _____ _ __| |
+    | | |_ |/ _` | '_ ` _ \ / _ \  / _ \ \ / / _ \ '__| |
+    | |__| | (_| | | | | | |  __/ | (_) \ V /  __/ |  |_|
+    \_____|\__,_|_| |_| |_|\___|  \___/ \_/ \___|_|  (_)
 
-  """)
+    """)
                                                       
                                                       
 def play_again():
@@ -232,7 +227,7 @@ def play_again():
         clear_terminal()
         start_game()
     elif answer == 'n':
-        print("""
+        print(Fore.GREEN + """
   _____ _                 _           __                    _             _             _ 
  |_   _| |__   __ _ _ __ | | _____   / _| ___  _ __   _ __ | | __ _ _   _(_)_ __   __ _| |
    | | | '_ \ / _` | '_ \| |/ / __| | |_ / _ \| '__| | '_ \| |/ _` | | | | | '_ \ / _` | |
