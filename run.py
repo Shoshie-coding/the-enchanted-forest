@@ -48,7 +48,7 @@ def start_game():
           |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
     """)
-    answer = input(f"{Fore.MAGENTA}Hello {select_name}, welcome to the Enchanted forest!\nType y to start the game and n to end it.\n").strip()
+    answer = input(f"{Fore.YELLOW}Hello {select_name}, welcome to the Enchanted forest!\nType y to start the game and n to end it.\n").strip()
     if answer == "y":
         print(f"{Fore.GREEN}You made the right choice!") 
         clear_terminal()
@@ -241,6 +241,7 @@ def play_again():
         print("You will now be directed to the beginning of the game")
         clear_terminal()
         start_game()
+        
 
 def incorrect_answer():
     """
