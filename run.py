@@ -42,7 +42,7 @@ def start_game():
           ~~~w/w~"~~,\` `:/,-(~`"~~~~~~~~"~o~\~/~w|/
 ''')
     # This takes user to type their name
-    select_name = input(f"{Fore.MAGENTA}Type your name or username to start the game\n").strip()
+    select_name = input(f"{Fore.BLUE}Type your name or username to start the game\n").strip()
     print(Fore.GREEN + """
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
           |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
@@ -97,7 +97,7 @@ def game_intro():
     time.sleep(2)
     print(f"{Fore.CYAN}You need to follow the prompts on the screen to play this game")
     time.sleep(2)
-    print(f"{Fore.MAGENTA}Press c to continue the game and q to quit")
+    print(f"{Fore.BLUE}Press C to continue the game and Q to quit")
     answer = input("\n").lower().strip()
     if answer == "c":
         time.sleep(2)
@@ -110,13 +110,25 @@ def game_intro():
         game_over()
     
     else:
-        """
-        Let user know the answer is incorrect and takes 
-        user to the start of the game
-        """
-        print("This is an incorrect answer")
-        print("You need to chose yes or no")
-        start_game()
+    #Let user know the answer is incorrect
+        clear_terminal()
+        print(f"{Fore.RED}This is an incorrect answer")
+        time.sleep(2)
+        answer = input(f"{Fore.RED}You need to type C or Q.\n")
+        if answer == "c":
+            time.sleep(2)
+            clear_terminal()
+            print(f"{Fore.GREEN}Great, you're brave enough to continue the game!")
+            two_paths()
+        elif answer == "q":
+            print("Sorry to see you go!")
+            game_over()
+        else:
+            #Let user know the answer is incorrect
+            print(f"{Fore.RED}This is an incorrect answer.")
+            print("Taking you to the beginning of the game")
+            start_game()
+        
 
 def two_paths():
     print(f"{Fore.CYAN}\nYou come at a crossroads and you see two paths")
