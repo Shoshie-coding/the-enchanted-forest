@@ -151,7 +151,7 @@ def two_paths():
         meet_fairy()
     elif answer == "2":
         clear_terminal()
-        print(f"{Fore.CYAN}This is a good choice. Now let's see where it takes you")
+        print(f"{Fore.CYAN}\nThis is a good choice. Now let's see where it takes you")
         time.sleep(2)
         meet_stag()
     else:
@@ -193,7 +193,7 @@ def meet_fairy():
         time.sleep(2)
         play_again()
     elif answer == "2":
-        print(f"{Fore.CYAN}Fantastic choice, the forest fairies will always guide you find your way home.\n")
+        print(f"{Fore.CYAN}\nFantastic choice, the forest fairies will always guide you find your way home.\n")
         meet_redhead_woman()
     else:
         #Let user know the answer is incorrect
@@ -234,7 +234,7 @@ def meet_redhead_woman():
     print(f"{Fore.CYAN}She's holding a basket with fruits and meat pies in it")
     print(f"{Fore.CYAN}You also see a beehive with honey in the tree besides you.\n")
 
-    answer = input(f"{Fore.YELLOW}Which do you chose? \n Type 1 to eat what's in the basket or 2 to eat the honey.\n")
+    answer = input(f"{Fore.YELLOW}Which do you chose? \nType 1 to eat what's in the basket or 2 to eat the honey.\n")
     if answer == "1":
         print(f"{Fore.RED}This is a bad choice. The readhead woman transforms into a witch.")
         print(f"{Fore.RED}The food from the basket was poisoned")
@@ -243,8 +243,9 @@ def meet_redhead_woman():
         play_again()
 
     elif answer == "2":
-        print(f"{Fore.CYAN}Great choice!")
+        print(f"{Fore.CYAN}\nGreat choice!")
         print(f"{Fore.CYAN}The honey is nutritious and will give you enough energy to continue your trip")
+        meet_knight()
     else:
         #Let user know the answer is incorrect
         clear_terminal()
@@ -269,13 +270,83 @@ def meet_redhead_woman():
 
 
 def meet_knight():
-    print("You walk further along the path")
-    print("You see a knight in his shiny armour mounted on his black horse")
-    print("You know that it's the knights job to maintain law and order")
-    print("The knight asks you who you are and what you're doing in the forest")
-    print("You tell the knight you're trying to get home")
-    print("The knight gives you two options\n")
-    print("Option #1: You can ")
+    print(f"{Fore.CYAN}You walk further along the path")
+    print(f"{Fore.CYAN}You see a knight in his shiny armour mounted on his black horse\n")
+    time.sleep(2)
+
+    print(""" 
+     _   _   _   _+       
+/_`-'_`-'_`-'_|  \+/  |
+\_`M'_`D'_`C'_| _<=>_ |
+  `-' `-' `-' 0/ \ / o=o
+              \/\ ^ /`0
+              | /_^_\
+              | || ||
+______________|_d|_|b____
+
+    """)
+
+    print(f"{Fore.CYAN}You know that it's the knights job to maintain law and order")
+    print(f"{Fore.CYAN}The knight asks you who you are and what you're doing in the forest")
+    print(f"{Fore.CYAN}You tell the knight you're trying to get home")
+    print(f"{Fore.CYAN}The knight gives you two options\n")
+    time.sleep(2)
+    print(f"{Fore.CYAN}Option #1: He'll take you out of the forest and into your village")
+    print(f"{Fore.CYAN}But this means you are indebted to him and owe him a favor in case he needs help.")
+    print(f"{Fore.CYAN}The knight is well know in that area and he knew your extended family")
+    print(f"{Fore.CYAN}So there's no chance for you to escape the debt\n")
+    time.sleep(2)
+    print(f"{Fore.CYAN}Option #2: The Knight will tell you where to go but you need to get there by yourself")
+    print(f"{Fore.CYAN}You need to rememeber that it's getting dark and there all kinds of wild animals waking up to hunt")
+
+    answer = input(f"{Fore.YELLOW}Which option do you chose? Type 1 or 2\n")
+
+    if answer == "1":
+        print(f"{Fore.CYAN}Great choice!")
+        print(f"{Fore.CYAN}The knight takes you outside the forest and into your village")
+        print(f"{Fore.CYAN}You thank him for his kindness and introduce him to your family")
+        print(f"{Fore.CYAN}Your family prepare a feast for him and celebrate your safe return")
+        print(f"{Fore.CYAN}The knight said you're not indebted to him anymore, instead you've become friends!")
+        win_game()
+        time.sleep(2)
+        play_again
+
+    elif answer == "2":
+        print(f"{Fore.RED}This is a bad choice. It's not a good idea to walk alone in the forest when it's dark.")
+        print(f"{Fore.RED}You thank the knight for the instructions and bid him farewell")
+        print(f"{Fore.RED}But a poisonous snake bites you and you die")
+        game_over()
+        play_again()
+
+   
+    else:
+        #Let user know the answer is incorrect
+        clear_terminal()
+        print(f"{Fore.RED}This is an incorrect answer")
+        time.sleep(2)
+        answer = input(f"{Fore.RED}You need to type 1 or 2.\n")
+        if answer == "1":
+            print(f"{Fore.RED}This is a bad choice. It's not a good idea to walk alone in the forest when it's dark.")
+            print(f"{Fore.RED}You thank the knight for the instructions and bid him farewell")
+            print(f"{Fore.RED}But a poisonous snake bites you and you die")
+            game_over()
+            play_again()
+        elif answer == "2":
+            print(f"{Fore.CYAN}Great choice!")
+            print(f"{Fore.CYAN}The knight takes you outside the forest and into your village")
+            print(f"{Fore.CYAN}You thank him for his kindness and introduce him to your family")
+            print(f"{Fore.CYAN}Your family prepare a feast for him and celebrate your safe return")
+            print(f"{Fore.CYAN}The knight said you're not indebted to him anymore, instead you've become friends!")
+            win_game()
+            time.sleep(2)
+            play_again
+        else:
+            #Lets user know the answer is incorrect and takes them to start_game()
+            print(f"{Fore.RED}This is an incorrect answer.")
+            time.sleep(2)
+            print(f"{Fore.RED}Taking you to the beginning of the game.")
+            start_game()
+
     
 
 
@@ -307,21 +378,25 @@ def play_again():
     """)  
 
     else:  
-        #Let user know the answer is incorrect
+        #Let user know the answer is incorrect and takes user to start_game
         print("This is an incorrect answer")
         print("You need to type Y or N")
         print("You will now be directed to the beginning of the game")
-        clear_terminal()
         start_game()
 
 
 def win_game():
     #This function lets user know that they won the game
-    print(f"{Fore.CYAN} Ypu won the game! Now you're out of the forest!Congrats")
-
+     print(Fore.LIGHTMAGENTA_EX + """
+                
+        ░█──░█ █▀▀█ █──█ 　 █───█ ─▀─ █▀▀▄ █ 
+        ░█▄▄▄█ █──█ █──█ 　 █▄█▄█ ▀█▀ █──█ ▀ 
+        ──░█── ▀▀▀▀ ─▀▀▀ 　 ─▀─▀─ ▀▀▀ ▀──▀ ▄
+                
+    """)
         
 
-
+        
 start_game()
 
 
