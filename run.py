@@ -258,7 +258,7 @@ def meet_knight():
 
 
 def game_over():    
-    print(Fore.RED}{Style.BRIGHT} + """
+    print(Fore.RED + """
     _____                                            _ 
     / ____|                                          | |
     | |  __  __ _ _ __ ___   ___    _____   _____ _ __| |
