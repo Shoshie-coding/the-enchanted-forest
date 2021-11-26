@@ -54,7 +54,7 @@ def start_game():
         game_intro()
     elif answer == "e":
         clear_terminal()
-        print("Now you can wake up, it was all a dream.")
+        print(f"{Fore.CYAN}Now you can wake up, it was all a dream.")
         game_over()
         play_again()
     else:
@@ -74,11 +74,11 @@ def start_game():
         else:
             #Let user know the answer is incorrect
             print(f"{Fore.RED}This is an incorrect answer.")
-            print("Taking you to the beginning of the game")
+            print(f"{Fore.CYAN}Taking you to the beginning of the game")
             start_game()
         
 def game_intro():
-    print(f"{Fore.CYAN}{Style.BRIGHT}\nThe year is 1290, you are on the outskirts of the forest")
+    print(f"{Fore.CYAN}\nThe year is 1290, you are on the outskirts of the forest")
     time.sleep(2)
     print(f"{Fore.CYAN}You are picking mushrooms and berries")
     time.sleep(2)
@@ -96,16 +96,16 @@ def game_intro():
     time.sleep(2)
     print(f"{Fore.CYAN}You need to follow the prompts on the screen to play this game.\n")
     time.sleep(2)
-    print(f"{Fore.BLUE}Press C to continue the game and Q to quit")
+    print(f"{Fore.YELLOW}Press C to continue the game and Q to quit")
     answer = input("").lower().strip()
     if answer == "c":
         time.sleep(2)
         clear_terminal()
-        print(f"{Fore.GREEN}Great, you're brave enough to continue the game!")
+        print(f"{Fore.CYAN}Great, you're brave enough to continue the game!")
         two_paths()
 
     elif answer == "q":
-        print("Sorry to see you go!")
+        print(f"{Fore.CYAN}Sorry to see you go!")
         game_over()
     
     else:
@@ -117,10 +117,10 @@ def game_intro():
         if answer == "c":
             time.sleep(2)
             clear_terminal()
-            print(f"{Fore.GREEN}Great, you're brave enough to continue the game!")
+            print(f"{Fore.CYAN}Great, you're brave enough to continue the game!")
             two_paths()
         elif answer == "q":
-            print("Sorry to see you go!")
+            print(f"{Fore.CYAN}Sorry to see you go!")
             game_over()
         else:
             #Let user know the answer is incorrect
@@ -141,7 +141,7 @@ def two_paths():
     print(f"{Fore.CYAN}On the upside, the path is well lit, you can see where you're walking\n")
     time.sleep(2)
 
-    answer = input(f"{Fore.BLUE}Which path will you chose? Type 1 or 2.\n").lower().strip()
+    answer = input(f"{Fore.YELLOW}Which path will you chose? Type 1 or 2.\n").lower().strip()
     if answer == "1":
         clear_terminal()
         print("\nExcellent choice!\n")
@@ -207,16 +207,14 @@ def meet_fairy():
         elif answer == "2":
             time.sleep(2)
             clear_terminal()
-            print(f"{Fore.GREEN}Fantastic choice, the forest fairies will always guide you find your way home")
+            print(f"{Fore.CYAN}Fantastic choice, the forest fairies will always guide you find your way home")
             meet_redhead_woman()
         else:
             #Let user know the answer is incorrect
             print(f"{Fore.RED}This is an incorrect answer.")
             time.sleep(2)
-            print("Taking you to the beginning of the game.")
+            print(f"{Fore.RED}Taking you to the beginning of the game.")
             start_game()
-
-
 
 
 def meet_redhead_woman():
@@ -269,7 +267,7 @@ def game_over():
                                                       
                                                       
 def play_again():
-    answer = input("Do you want to play again?\n Y / N\n").lower()
+    answer = input(f"{Fore.CYAN}Do you want to play again?\n Y / N\n").lower()
     if answer == "y":
         clear_terminal()
         start_game()
