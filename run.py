@@ -95,10 +95,10 @@ def game_intro():
     time.sleep(2)
     print(f"{Fore.CYAN}Now you need to find a way out before the sun sets")
     time.sleep(2)
-    print(f"{Fore.CYAN}You need to follow the prompts on the screen to play this game")
+    print(f"{Fore.CYAN}You need to follow the prompts on the screen to play this game.\n")
     time.sleep(2)
     print(f"{Fore.BLUE}Press C to continue the game and Q to quit")
-    answer = input("\n").lower().strip()
+    answer = input("").lower().strip()
     if answer == "c":
         time.sleep(2)
         clear_terminal()
@@ -133,25 +133,24 @@ def game_intro():
 def two_paths():
     print(f"{Fore.CYAN}\nYou come at a crossroads and you see two paths")
     print(f"{Fore.CYAN}Path number 1: Go on the straigh path across the forest")
-    print(f"{Fore.CYAN}This path is lined with trees and it's not well lit")
-    print(f"{Fore.CYAN}But it's very easy to walk on this path")
+    print(f"{Fore.CYAN}This path is lined with trees and is not well lit")
+    print(f"{Fore.CYAN}But it's easily walkable even when it's dark.\n")
     time.sleep(2)
 
     print(f"{Fore.CYAN}Path number 2: this takes you on a narrow road down the slope in the mountains.")
     print(f"{Fore.CYAN}There are rocks and tree branches everywhere on this second path")
-    print(f"{Fore.CYAN}On the upside, the path is well lit, you can see where you're walking")
+    print(f"{Fore.CYAN}On the upside, the path is well lit, you can see where you're walking\n")
     time.sleep(2)
 
-    answer = input(f"{Fore.MAGENTA}Which path will you chose? Type 1 or 2.\n").lower().strip()
+    answer = input(f"{Fore.BLUE}Which path will you chose? Type 1 or 2.\n").lower().strip()
     if answer == "1":
-        print("Excellent choice!")
-        clear_terminal()
+        print("\nExcellent choice!\n")
+        time.sleep(2)
         meet_fairy()
     elif answer == "2":
-        print("This is a good choice as well but let's see where it takes you")
-        clear_terminal()
+        print("This is a good choice. Now let's see where it takes you")
+        time.sleep(2)
         meet_stag()
-
     else:
         #Let user know the answer is incorrect
         clear_terminal()
@@ -163,8 +162,8 @@ def two_paths():
             clear_terminal()
             meet_fairy()
         elif answer == "2":
-            clear_terminal()
             print(f"{Fore.GREEN}This is a great choice, let's see who you're going to meet this time")
+            clear_terminal()
             meet_stag()
         else:
             #Let user know the answer is incorrect
@@ -176,26 +175,47 @@ def two_paths():
 def meet_fairy():
     print(f"{Fore.CYAN}After walking around half an hour")
     print(f"{Fore.CYAN}You meet a fairy. She's sitting on a tree log, playing a harph")
-    print(f"{Fore.CYAN}She lights up everything around her")
+    print(f"{Fore.CYAN}She lights up everything around her\n")
     time.sleep(2)
     print(f"{Fore.CYAN}It's getting dark, and she offers to lead you through the forest")
-    print(f"{Fore.CYAN}But you you see a big torch on the ground")
+    print(f"{Fore.CYAN}But you you see a big torch on the ground\n")
 
-    answer = input(f"{Fore.BLUE}Which will you chose to guide you home? Type 1 for lantern or 2 for fairy.\n").lower().strip()
+    answer = input(f"{Fore.BLUE}Which will you chose to guide you home? Type 1 for torch or 2 for fairy.\n").lower().strip()
     clear_terminal()
     if answer == "1":
         print(f"{Fore.RED}This is an unfortunate choice. You cannot survive alone in the forest")
         print(f"{Fore.RED}You meet a bear and wrestle with him and die")
+        time.sleep(2)
         game_over()
+        time.sleep(2)
         play_again()
     elif answer == "2":
         print(f"{Fore.GREEN}Fantastic choice, the forest fairies will always guide you find your way home")
+        clear_terminal()
         meet_redhead_woman()
     else:
         #Let user know the answer is incorrect
-        print("This is an incorrect answer")
-        print("You need to chose yes or no")
-        start_game()
+        clear_terminal()
+        print(f"{Fore.RED}This is an incorrect answer")
+        time.sleep(2)
+        answer = input(f"{Fore.RED}You need to type 1 or 2.\n")
+        if answer == "1":
+            print(f"{Fore.RED}This is an unfortunate choice. You cannot survive alone in the forest")
+            print(f"{Fore.RED}You meet a bear and wrestle with him and die")
+            game_over()
+            play_again()
+        elif answer == "2":
+            time.sleep(2)
+            clear_terminal()
+            print(f"{Fore.GREEN}Fantastic choice, the forest fairies will always guide you find your way home")
+            meet_redhead_woman()
+        else:
+            #Let user know the answer is incorrect
+            print(f"{Fore.RED}This is an incorrect answer.")
+            time.sleep(2)
+            print("Taking you to the beginning of the game.")
+            start_game()
+
 
 
 
@@ -231,7 +251,7 @@ def meet_knight():
     print("You know that it's the knights job to maintain law and order")
     print("The knight asks you who you are and what you're doing in the forest")
     print("You tell the knight you're trying to get home")
-    print("The knight gives you two options")
+    print("The knight gives you two options\n")
     print("Option #1: You can ")
     
 
