@@ -79,7 +79,7 @@ def start_game():
             start_game()
         
 def game_intro():
-    print(f"{Fore.CYAN}{StyleBRIGHT}\nThe year is 1290, you are on the outskirts of the forest")
+    print(f"{Fore.CYAN}{Style.BRIGHT}\nThe year is 1290, you are on the outskirts of the forest")
     time.sleep(2)
     print(f"{Fore.CYAN}You are picking mushrooms and berries")
     time.sleep(2)
@@ -258,7 +258,7 @@ def meet_knight():
 
 
 def game_over():    
-    print(Fore.RED + """
+    print(Fore.RED + Style.BRIGHT + """
     _____                                            _ 
     / ____|                                          | |
     | |  __  __ _ _ __ ___   ___    _____   _____ _ __| |
