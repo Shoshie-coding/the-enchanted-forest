@@ -144,11 +144,11 @@ def two_paths():
     answer = input(f"{Fore.YELLOW}Which path will you chose? Type 1 or 2.\n").lower().strip()
     if answer == "1":
         clear_terminal()
-        print("\nExcellent choice!\n")
+        print(f"{Fore.CYAN}\nExcellent choice!\n")
         time.sleep(2)
         meet_fairy()
     elif answer == "2":
-        print("This is a good choice. Now let's see where it takes you")
+        print(f"{Fore.CYAN}This is a good choice. Now let's see where it takes you")
         time.sleep(2)
         meet_stag()
     else:
@@ -158,11 +158,11 @@ def two_paths():
         time.sleep(2)
         answer = input(f"{Fore.RED}You need to type Y or N.\n")
         if answer == "1":
-            print(f"{Fore.GREEN}You made the right choice!") 
+            print(f"{Fore.CYAN}You made the right choice!") 
             clear_terminal()
             meet_fairy()
         elif answer == "2":
-            print(f"{Fore.GREEN}This is a great choice, let's see who you're going to meet this time")
+            print(f"{Fore.CYAN}This is a great choice, let's see who you're going to meet this time")
             clear_terminal()
             meet_stag()
         else:
@@ -180,7 +180,7 @@ def meet_fairy():
     print(f"{Fore.CYAN}It's getting dark, and she offers to lead you through the forest")
     print(f"{Fore.CYAN}But you you see a big torch on the ground\n")
 
-    answer = input(f"{Fore.BLUE}Which will you chose to guide you home? Type 1 for torch or 2 for fairy.\n").lower().strip()
+    answer = input(f"{Fore.YELLOW}Which will you chose to guide you home? Type 1 for torch or 2 for fairy.\n").lower().strip()
     clear_terminal()
     if answer == "1":
         print(f"{Fore.RED}This is an unfortunate choice. You cannot survive alone in the forest")
@@ -190,7 +190,7 @@ def meet_fairy():
         time.sleep(2)
         play_again()
     elif answer == "2":
-        print(f"{Fore.GREEN}Fantastic choice, the forest fairies will always guide you find your way home")
+        print(f"{Fore.CYAN}Fantastic choice, the forest fairies will always guide you find your way home")
         clear_terminal()
         meet_redhead_woman()
     else:
@@ -218,9 +218,9 @@ def meet_fairy():
 
 
 def meet_redhead_woman():
-    print("The fairy brings you to a clearing in the forest")
-    print("You continue your journey through the woods,")
-    print("thinking of the best way to get home to your village")
+    print(f"{Fore.CYAN}The fairy brings you to a clearing in the forest")
+    print(f"{Fore.CYAN}You continue your journey through the woods,")
+    print(f"{Fore.CYAN}Thinking of the best way to get home to your village")
     print("But you get hungry and thristy")
     print("Now you hear water flowing in the distance")
     print("You walk toweards that direction")
