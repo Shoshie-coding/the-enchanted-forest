@@ -42,7 +42,7 @@ def start_game():
           ~~~w/w~"~~,\` `:/,-(~`"~~~~~~~~"~o~\~/~w|/
 ''')
     # This takes user to type their name
-    select_name = input(f"{Fore.BLUE}Type your name or username to start the game\n").strip()
+    select_name = input(f"{Fore.BLUE}{Style.BRIGHT}Type your name or username to start the game\n").strip()
     print(Fore.GREEN + """
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
           |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
@@ -50,7 +50,7 @@ def start_game():
     """)
     answer = input(f"{Fore.BLUE}Hello {select_name}, welcome to the Enchanted forest!\nType y to start the game and n to end it.\n").strip()
     if answer == "y":
-        print(f"{Fore.GREEN}You made the right choice!") 
+        print(f"{Fore.GREEN}{Style.BRIGHT}You made the right choice!") 
         clear_terminal()
         game_intro()
     elif answer == "n":
@@ -144,6 +144,7 @@ def two_paths():
 
     answer = input(f"{Fore.BLUE}Which path will you chose? Type 1 or 2.\n").lower().strip()
     if answer == "1":
+        clear_terminal()
         print("\nExcellent choice!\n")
         time.sleep(2)
         meet_fairy()
@@ -257,7 +258,7 @@ def meet_knight():
 
 
 def game_over():    
-    print(Fore.RED + """
+    print(Fore.RED}{Style.BRIGHT} + """
     _____                                            _ 
     / ____|                                          | |
     | |  __  __ _ _ __ ___   ___    _____   _____ _ __| |
