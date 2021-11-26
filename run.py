@@ -42,18 +42,17 @@ def start_game():
           ~~~w/w~"~~,\` `:/,-(~`"~~~~~~~~"~o~\~/~w|/
 ''')
     # This takes user to type their name
-    select_name = input(f"{Fore.BLUE}{Style.BRIGHT}Type your name or username to start the game\n").strip()
+    select_name = input(f"{Fore.YELLOW}Type your name or username to start the game\n").strip()
     print(Fore.GREEN + """
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
           |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
     """)
-    answer = input(f"{Fore.BLUE}Hello {select_name}, welcome to the Enchanted forest!\nType y to start the game and n to end it.\n").strip()
-    if answer == "y":
-        print(f"{Fore.GREEN}{Style.BRIGHT}You made the right choice!") 
+    answer = input(f"{Fore.CYAN}Hello {select_name}, welcome to the Enchanted forest!{Fore.YELLOW}{Style.BRIGHT}\nType S to start the game and E to end it.\n").strip()
+    if answer == "s":
         clear_terminal()
         game_intro()
-    elif answer == "n":
+    elif answer == "e":
         clear_terminal()
         print("Now you can wake up, it was all a dream.")
         game_over()
@@ -63,14 +62,14 @@ def start_game():
         clear_terminal()
         print(f"{Fore.RED}This is an incorrect answer")
         time.sleep(2)
-        answer = input(f"{Fore.RED}You need to type Y or N.\n")
-        if answer == "y":
-            print(f"{Fore.GREEN}You made the right choice!") 
+        answer = input(f"{Fore.RED}You need to type S or E.\n")
+        if answer == "s":
+            print(f"{Fore.CYAN}You made the right choice!") 
             clear_terminal()
             game_intro()
-        elif answer == "n":
+        elif answer == "e":
             clear_terminal()
-            print("Now you can wake up, it was all a dream.")
+            print(f"{Fore.CYAN}Now you can wake up, it was all a dream.")
             game_over()
         else:
             #Let user know the answer is incorrect
