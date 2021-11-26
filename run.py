@@ -243,6 +243,7 @@ def meet_redhead_woman():
         play_again()
 
     elif answer == "2":
+        clear_terminal()
         print(f"{Fore.CYAN}\nGreat choice!")
         print(f"{Fore.CYAN}The honey is nutritious and will give you enough energy to continue your trip")
         meet_knight()
@@ -271,10 +272,10 @@ def meet_redhead_woman():
 
 def meet_knight():
     print(f"{Fore.CYAN}You walk further along the path")
-    print(f"{Fore.CYAN}You see a knight in his shiny armour mounted on his black horse\n")
+    print(f"{Fore.CYAN}You see a knight in his shining armour mounted on his black horse\n")
     time.sleep(2)
 
-    print(""" 
+    print(Fore.CYAN + """ 
      _   _   _   _+       
 /_`-'_`-'_`-'_|  \+/  |
 \_`M'_`D'_`C'_| _<=>_ |
@@ -292,12 +293,15 @@ ______________|_d|_|b____
     print(f"{Fore.CYAN}The knight gives you two options\n")
     time.sleep(2)
     print(f"{Fore.CYAN}Option #1: He'll take you out of the forest and into your village")
-    print(f"{Fore.CYAN}But this means you are indebted to him and owe him a favor in case he needs help.")
+    print(f"{Fore.CYAN}But this means you are indebted to him and owe him a favor")
     print(f"{Fore.CYAN}The knight is well know in that area and he knew your extended family")
     print(f"{Fore.CYAN}So there's no chance for you to escape the debt\n")
     time.sleep(2)
-    print(f"{Fore.CYAN}Option #2: The Knight will tell you where to go but you need to get there by yourself")
-    print(f"{Fore.CYAN}You need to rememeber that it's getting dark and there all kinds of wild animals waking up to hunt")
+    print(f"{Fore.CYAN}Option #2: The Knight will tell you where to go")
+    print(f"{Fore.CYAN}But you need to get there by yourself")
+    print(f"{Fore.CYAN}You need to rememeber that it's getting dark")
+    print(f"{Fore.CYAN}And there all kinds of wild animals waking up to hunt")
+
 
     answer = input(f"{Fore.YELLOW}Which option do you chose? Type 1 or 2\n")
 
@@ -387,7 +391,7 @@ def play_again():
 
 def win_game():
     #This function lets user know that they won the game
-     print(Fore.LIGHTMAGENTA_EX + """
+     print(Fore.MAGENTA + """
                 
         ░█──░█ █▀▀█ █──█ 　 █───█ ─▀─ █▀▀▄ █ 
         ░█▄▄▄█ █──█ █──█ 　 █▄█▄█ ▀█▀ █──█ ▀ 
