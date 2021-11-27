@@ -3,7 +3,7 @@ import os
 
 import colorama
 from colorama import Fore, Back, Style
-colorama.init(autoreset=True)
+colorama.init()
 
 
 def clear_terminal():
