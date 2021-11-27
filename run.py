@@ -133,7 +133,7 @@ def two_paths():
     print(f"{Fore.CYAN}\nYou come at a crossroads and you see two paths")
 
     time.sleep(2)
-    print(f"{Fore.CYAN}Path number 1: Go on the straigh path across the forest")
+    print(f"{Fore.CYAN}Path number 1: Go on the straight path across the forest")
     print(f"{Fore.CYAN}This path is lined with trees and is not well lit")
     print(f"{Fore.CYAN}But it's easily walkable even when it's dark.\n")
     time.sleep(2)
@@ -218,6 +218,49 @@ def meet_fairy():
             time.sleep(2)
             print(f"{Fore.RED}Taking you to the beginning of the game.")
             start_game()
+
+
+def meet_stag():
+    print(f"{Fore.CYAN}You carefully walk down the mountains")
+    print(f"{Fore.CYAN}And then up again until you come to a waterfall")
+    time.sleep(2)
+    print(f"{Fore.CYAN}You go there to drink some water")
+    print(f"{Fore.CYAN}You notice a stag on top of the waterfall")
+    time.sleep(2)
+
+    print(Fore.CYAN + """
+    
+     /|       |\
+  `__\\       //__'
+     ||      ||
+   \__`\     |'__/
+     `_\\   //_'
+     _.,:---;,._
+     \_:     :_/
+       |@. .@|
+       |     |
+       ,\.-./ \
+       ;;`-'   `---__________-----.-.
+       ;;;                         \_\
+       ';;;                         |
+        ;    |                      ;
+         \   \     \        |      /
+          \_, \    /        \     |\
+            |';|  |,,,,,,,,/ \    \ \_
+            |  |  |           \   /   |
+            \  \  |           |  / \  |
+             | || |           | |   | |
+             | || |           | |   | |
+             |_||_|           |_|   |_|
+            /_//_/           /_/   /_/ 
+
+
+    """)
+    print(f"{Fore.CYAN}You know these are ellusive animals")
+    print(f"{Fore.CYAN}And take this as a good omen")
+    print(f"{Fore.CYAN}The stag gets near to you and leads you to a green valley")
+
+
 
 
 def meet_redhead_woman():
@@ -321,8 +364,6 @@ ______________|_d|_|b____
         print(f"{Fore.RED}But a poisonous snake bites you and you die")
         game_over()
         play_again()
-
-   
     else:
         #Let user know the answer is incorrect
         clear_terminal()
@@ -352,7 +393,6 @@ ______________|_d|_|b____
             start_game()
 
     
-
 #This function is run when user decides to quit the game or when they lose the game
 def game_over():    
     print(Fore.RED + Style.BRIGHT + """
