@@ -47,8 +47,7 @@ def start_game():
           ~~~w/w~"~~,\` `:/,-(~`"~~~~~~~~"~o~\~/~w|/
 ''')
 
-    name = input(f"{Fore.YELLOW}{Style.BRIGHT}\
-    Type a username to start the game\n")
+    name = input(f"{Fore.YELLOW}{Style.BRIGHT}Type a username to start the game\n")
 
     print(Fore.GREEN + """
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
@@ -56,8 +55,7 @@ def start_game():
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
     """)
     print(f"{Fore.CYAN}Hello {name}, welcome to the Enchanted forest!")
-    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Type S to start\
-    the game and E to end it.\n")
+    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Type S to start the game and E to end it.\n")
     if answer == "s":
         clear_terminal()
         game_intro()
@@ -111,10 +109,10 @@ def game_intro():
     print(f"{Fore.CYAN}And all kinds of creatures lurk around")
     time.sleep(2)
     print(f"{Fore.CYAN}Follow the prompts on the screen to play this game\n")
-    print(f"{Fore.CYAN}And see if you can escape\n")
+    print(f"{Fore.CYAN}And see if you can escape")
     print(f"{Fore.CYAN}From the forest before sunset")
     time.sleep(2)
-    print(f"{Fore.YELLOW}{Style.BRIGHT}Press C to continue or Q to quit")
+    print(f"{Fore.YELLOW}{Style.BRIGHT}\nPress C to continue or Q to quit")
     answer = input("").lower().strip()
     if answer == "c":
         time.sleep(2)
@@ -181,7 +179,7 @@ def two_paths():
     elif answer == "2":
         clear_terminal()
         print(f"{Fore.CYAN}\nThis is a good choice.")
-        print(f"{Fore.CYAN} Now let's see where it takes you")
+        print(f"{Fore.CYAN}Now let's see where it takes you")
         time.sleep(5)
         clear_terminal
         meet_deer()
@@ -226,7 +224,7 @@ def meet_fairy():
     print(f"{Fore.CYAN}Option #1 pick up the torch and find your way home")
     print(f"{Fore.CYAN}Option #2 let the fairy guide you trhough the forest")
 
-    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Which will you chose, 1 or 2?")
+    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}\nWhich will you chose: 1 or 2?")
     clear_terminal()
     if answer == "1":
         print(f"{Fore.RED}This is an unfortunate choice.")
@@ -276,11 +274,11 @@ def meet_fairy():
 
 
 def meet_deer():
-    print(f"{Fore.CYAN}You carefully walk down the mountains")
+    print(f"{Fore.CYAN}\nYou carefully walk down the mountains")
     print(f"{Fore.CYAN}And then up again until you come to a waterfall")
     time.sleep(2)
     print(f"{Fore.CYAN}You go there to drink some water")
-    input(f"{Fore.YELLOW}{Style.BRIGHT}Press 'enter' to continue the game.\n")
+    input(f"{Fore.YELLOW}{Style.BRIGHT}\nPress 'enter' to continue the game.\n")
     time.sleep(2)
 
     print(f"{Fore.CYAN}You notice a deer at the top of the waterfall")
@@ -320,8 +318,7 @@ def meet_deer():
     print(f"{Fore.CYAN}And stands on its hind legs")
     print(f"{Fore.CYAN}As a sign for you to follow it")
 
-    input(f"{Fore.YELLOW}{Style.BRIGHT}Press 'enter'\
-    to see where the deer leads you.\n").lower().strip()
+    input(f"{Fore.YELLOW}{Style.BRIGHT}Press 'enter'to see where the deer leads you.\n")
     time.sleep(2)
     print(f"{Fore.CYAN}The deer leads you out of the valley")
     print(f"{Fore.CYAN}And into the forest")
