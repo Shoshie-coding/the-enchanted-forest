@@ -17,7 +17,7 @@ def clear_terminal():
 
 # This is the start game function that also acts as an intro for the game
 def start_game():
-    print(Fore.GREEN + '''
+    print(Fore.LIGHTGREEN_EX + '''
             .        +          .      .          .
   ,              /;-._,-.____        ,-----.__
  ((        .    (_:#::_.:::. `-._   /:, /-._, `._,
