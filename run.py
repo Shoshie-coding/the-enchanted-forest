@@ -3,11 +3,9 @@ import os
 
 import colorama
 from colorama import Fore, Back, Style, init
-from sys import stdout
 init()
 colorama.init()
 
-stdout.write(Fore.RED + Style.BRIGHT + "Test" + Style.RESET_ALL + "\n")
 
 def clear_terminal():
     """
@@ -45,7 +43,7 @@ def start_game():
           ~~~w/w~"~~,\` `:/,-(~`"~~~~~~~~"~o~\~/~w|/
 ''')
     # This takes user to type their name
-    select_name = input(f"{Fore.YELLOW}Type your name or username to start the game\n").strip()
+    select_name = input(f"{Fore.YELLOW}{Style.BRIGHT}Type your name or username to start the game\n").strip()
     print(Fore.GREEN + """
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
           |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
