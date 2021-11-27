@@ -1,8 +1,8 @@
 import time 
 import os 
-
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Style 
+
 colorama.init(autoreset=True)
 
 
@@ -12,7 +12,8 @@ def clear_terminal():
     Credit to Stack Overflow 
     https://stackoverflow.com/questions/517970/how-to-clear-the-interpreter-console
     """
-    os.system('cls' if os.name=='nt' else 'clear')
+    
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 # This is the start game function that also acts as an intro for the game
@@ -41,14 +42,18 @@ def start_game():
                )  ___/#\::`/ (O "==._____   O, (O  /`
           ~~~w/w~"~~,\` `:/,-(~`"~~~~~~~~"~o~\~/~w|/
 ''')
-    # This takes user to type their name
-    select_name = input(f"{Fore.YELLOW}{Style.BRIGHT}Type your name or username to start the game\n").strip()
+    #This takes user to type their name
+    name = input(f"{Fore.YELLOW}{Style.BRIGHT}\
+    Type a username to start the game\n")
+
     print(Fore.GREEN + """
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
           |T|h|e| |E|n|c|h|a|n|t|e|d| |F|o|r|e|s|t|
 +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ 
     """)
-    answer = input(f"{Fore.CYAN}Hello {select_name}, welcome to the Enchanted forest!{Fore.YELLOW}{Style.BRIGHT}\nType S to start the game and E to end it.\n").strip()
+    print(f"{Fore.CYAN}Hello {name}, welcome to the Enchanted forest!")
+    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}\nType S to start\
+    the game and E to end it.\n").strip()
     if answer == "s":
         clear_terminal()
         game_intro()
@@ -58,7 +63,9 @@ def start_game():
         game_over()
         play_again()
     else:
-        #Let user know the answer is incorrect
+        """
+        Let user know the answer is incorrect
+        """
         clear_terminal()
         print(f"{Fore.RED}This is an incorrect answer")
         time.sleep(2)
@@ -72,20 +79,26 @@ def start_game():
             print(f"{Fore.CYAN}Now you can wake up, it was all a dream.")
             game_over()
         else:
-            #Let user know the answer is incorrect
+            """
+            Let user know the answer is incorrect
+            """
             print(f"{Fore.RED}This is an incorrect answer.")
             print(f"{Fore.CYAN}Taking you to the beginning of the game")
             start_game()
         
+        
 def game_intro():
-    print(f"{Fore.CYAN}The year is 1290, you are on the outskirts of the forest")
+    print(f"{Fore.CYAN}The year is 1290")
+    
+    print(f"{Fore.CYAN}You are on the outskirts of the forest")
     print(f"{Fore.CYAN}You are picking mushrooms and berries\n")
     time.sleep(2)
     print(f"{Fore.CYAN}You are going further into the forest") 
     print(f"{Fore.CYAN}And you are straying away from your village\n")
     time.sleep(2)
     print(f"{Fore.CYAN}After two hours, you want to go back home")
-    print(f"{Fore.CYAN}You start walking back and realize that you are deep into the forest\n")
+    print(f"{Fore.CYAN}You start walking back")
+    print(f"{Fore.CYAN}And realize that you are deep into the forest\n")
     print(f"{Fore.CYAN}And you don't know how to get back anymore")
     time.sleep(2)
     print(f"{Fore.CYAN}Now you need to find a way out before the sun sets\n")
@@ -226,7 +239,8 @@ def meet_deer():
     print(f"{Fore.CYAN}And then up again until you come to a waterfall")
     time.sleep(2)
     print(f"{Fore.CYAN}You go there to drink some water")
-    input(f"{Fore.YELLOW}{Style.BRIGHT}Press any key to continue the game.\n").lower().strip()
+    input(f"{Fore.YELLOW}{Style.BRIGHT}Press 'enter' to continue the game.\n")
+    time.sleep(2)
 
     print(f"{Fore.CYAN}You notice a deer at the top of the waterfall")
     time.sleep(2)
@@ -263,7 +277,13 @@ def meet_deer():
     print(f"{Fore.CYAN}And take this as a good omen")
     print(f"{Fore.CYAN}The deer gets near to you and leads you to a green valley")
 
-
+    input(f"{Fore.YELLOW}{Style.BRIGHT}Press 'enter' to see where the deer leads you.\n").lower().strip()
+    time.sleep(2)
+    print(f"{Fore.CYAN}The deer takes you out of the valley and into the forest")
+    print(f"{Fore.CYAN}And leaves you near a tall old oak tree")
+    print(f"{Fore.CYAN}You see a marking on its trunk")
+    print(f"{Fore.CYAN}Showing you two roads")
+    
 
 
 def meet_redhead_woman():
@@ -307,7 +327,8 @@ def meet_redhead_woman():
             play_again()
         elif answer == "2":
             print(f"{Fore.CYAN}Great choice!")
-            print(f"{Fore.CYAN}The honey is nutritious and will give you enough energy to continue your trip")
+            print(f"{Fore.CYAN}The honey is nutritious")
+            print(f"{Fore.CYAN}And will give you enough energy to continue your trip")
         else:
             #Lets user know the answer is incorrect and takes them to start_game()
             print(f"{Fore.RED}This is an incorrect answer.")
@@ -408,8 +429,12 @@ def game_over():
 
     """)
                                                       
-#This function is run when game is over regardless of whether user wins or not                                                      
 def play_again():
+    """
+    This function is run when game is over 
+    regardless of whether user wins or not
+    """
+
     answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Do you want to play again?\n Y / N\n").lower()
     if answer == "y":
         clear_terminal()
@@ -425,7 +450,9 @@ def play_again():
     """)  
 
     else:  
-        #Let user know the answer is incorrect and takes user to start_game
+        """
+        Let user know the answer is incorrect and takes user to start_game
+        """
         print("This is an incorrect answer")
         print("You need to type Y or N")
         print("You will now be directed to the beginning of the game")
@@ -433,8 +460,11 @@ def play_again():
 
 
 def win_game():
-    #This function lets user know that they won the game
-     print(Fore.MAGENTA + """
+    """
+    This function lets user know 
+    that they won the game
+    """
+    print(Fore.MAGENTA + """
                 
         ░█──░█ █▀▀█ █──█ 　 █───█ ─▀─ █▀▀▄ █ 
         ░█▄▄▄█ █──█ █──█ 　 █▄█▄█ ▀█▀ █──█ ▀ 
@@ -445,18 +475,6 @@ def win_game():
 
         
 start_game()
-
-
-
-
-
-
-
-
-    
-
-
-
 
 
 
