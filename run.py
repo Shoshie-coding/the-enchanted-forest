@@ -224,9 +224,11 @@ def meet_fairy():
 def meet_deer():
     print(f"{Fore.CYAN}You carefully walk down the mountains")
     print(f"{Fore.CYAN}And then up again until you come to a waterfall")
-    time.sleep(5)
+    time.sleep(2)
     print(f"{Fore.CYAN}You go there to drink some water")
-    print(f"{Fore.CYAN}You notice a deer on top of the waterfall")
+    input(f"{Fore.YELLOW}{Style.BRIGHT}Press any key to continue the game.\n").lower().strip()
+
+    print(f"{Fore.CYAN}You notice a deer at the top of the waterfall")
     time.sleep(2)
 
     print(Fore.CYAN + """
@@ -256,7 +258,7 @@ def meet_deer():
             /_//_/           /_/   /_/ 
 
     """)
-    time.sleep(5)
+    time.sleep(2)
     print(f"{Fore.CYAN}You know these are ellusive animals")
     print(f"{Fore.CYAN}And take this as a good omen")
     print(f"{Fore.CYAN}The deer gets near to you and leads you to a green valley")
