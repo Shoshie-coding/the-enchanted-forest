@@ -92,7 +92,7 @@ def game_intro():
     time.sleep(2)
     print(f"{Fore.CYAN}And you don't know how to get back anymore")
     time.sleep(2)
-    print(f"{Fore.CYAN}Now you need to find a way out before the sun sets")
+    print(f"{Fore.CYAN}{Style.BRIGHT}Now you need to find a way out before the sun sets")
     time.sleep(2)
     print(f"{Fore.CYAN}You need to follow the prompts on the screen to play this game.\n")
     time.sleep(2)
