@@ -96,7 +96,7 @@ def game_intro():
     time.sleep(2)
     print(f"{Fore.CYAN}You need to follow the prompts on the screen to play this game.\n")
     time.sleep(2)
-    print(f"{Fore.YELLOW}Press C to continue the game and Q to quit")
+    print(f"{Fore.YELLOW}{Style.BRIGHT}Press C to continue the game and Q to quit")
     answer = input("").lower().strip()
     if answer == "c":
         time.sleep(2)
@@ -143,7 +143,7 @@ def two_paths():
     print(f"{Fore.CYAN}On the upside, the path is well lit, you can see where you're walking\n")
     time.sleep(2)
 
-    answer = input(f"{Fore.YELLOW}Which path will you chose? Type 1 or 2.\n").lower().strip()
+    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Which path will you chose? Type 1 or 2.\n").lower().strip()
     if answer == "1":
         clear_terminal()
         print(f"{Fore.CYAN}\nExcellent choice!\n")
@@ -183,7 +183,7 @@ def meet_fairy():
     print(f"{Fore.CYAN}It's getting dark, and she offers to lead you through the forest")
     print(f"{Fore.CYAN}But you you see a big torch on the ground\n")
 
-    answer = input(f"{Fore.YELLOW}Which will you chose to guide you home? Type 1 for torch or 2 for fairy.\n").lower().strip()
+    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Which will you chose to guide you home? Type 1 for torch or 2 for fairy.\n").lower().strip()
     clear_terminal()
     if answer == "1":
         print(f"{Fore.RED}This is an unfortunate choice. You cannot survive alone in the forest")
@@ -234,7 +234,7 @@ def meet_redhead_woman():
     print(f"{Fore.CYAN}She's holding a basket with fruits and meat pies in it")
     print(f"{Fore.CYAN}You also see a beehive with honey in the tree besides you.\n")
 
-    answer = input(f"{Fore.YELLOW}Which do you chose? \nType 1 to eat what's in the basket or 2 to eat the honey.\n")
+    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Which do you chose? \nType 1 to eat what's in the basket or 2 to eat the honey.\n")
     if answer == "1":
         print(f"{Fore.RED}This is a bad choice. The readhead woman transforms into a witch.")
         print(f"{Fore.RED}The food from the basket was poisoned")
@@ -303,7 +303,7 @@ ______________|_d|_|b____
     print(f"{Fore.CYAN}And there all kinds of wild animals waking up to hunt")
 
 
-    answer = input(f"{Fore.YELLOW}Which option do you chose? Type 1 or 2\n")
+    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Which option do you chose? Type 1 or 2\n")
 
     if answer == "1":
         print(f"{Fore.CYAN}Great choice!")
@@ -367,7 +367,7 @@ def game_over():
                                                       
                                                       
 def play_again():
-    answer = input(f"{Fore.CYAN}Do you want to play again?\n Y / N\n").lower()
+    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Do you want to play again?\n Y / N\n").lower()
     if answer == "y":
         clear_terminal()
         start_game()
