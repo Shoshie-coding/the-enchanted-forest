@@ -2,9 +2,8 @@ import time
 import os 
 
 import colorama
-from colorama import Fore, Back, Style, init
-init()
-colorama.init()
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 
 
 def clear_terminal():
