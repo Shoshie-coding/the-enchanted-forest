@@ -78,23 +78,23 @@ def start_game():
             start_game()
         
 def game_intro():
-    print(f"{Fore.CYAN}\nThe year is 1290, you are on the outskirts of the forest")
-    time.sleep(2)
-    print(f"{Fore.CYAN}You are picking mushrooms and berries")
+    print(f"{Fore.CYAN}The year is 1290, you are on the outskirts of the forest")
+    print(f"{Fore.CYAN}You are picking mushrooms and berries\n")
     time.sleep(2)
     print(f"{Fore.CYAN}You are going further into the forest") 
-    time.sleep(2)
-    print(f"{Fore.CYAN}And you are straying away from your village")
+    print(f"{Fore.CYAN}And you are straying away from your village\n")
     time.sleep(2)
     print(f"{Fore.CYAN}After two hours, you want to go back home")
-    time.sleep(2)
-    print(f"{Fore.CYAN}You start walking back and realize that you are deep into the forest")
-    time.sleep(2)
+    print(f"{Fore.CYAN}You start walking back and realize that you are deep into the forest\n")
     print(f"{Fore.CYAN}And you don't know how to get back anymore")
     time.sleep(2)
-    print(f"{Fore.CYAN}{Style.BRIGHT}Now you need to find a way out before the sun sets")
+    print(f"{Fore.CYAN}Now you need to find a way out before the sun sets\n")
+    print(f"{Fore.CYAN}You know it's not safe to be in the forest at night")
+    print(f"{Fore.CYAN}This is when the forest comes alive!")
+    print(f"{Fore.CYAN}And all kinds of creatures lurk around")
     time.sleep(2)
-    print(f"{Fore.CYAN}You need to follow the prompts on the screen to play this game.\n")
+    print(f"{Fore.CYAN}Follow the prompts on the screen to play this game\n")
+    print(f"{Fore.CYAN}And see if you can escape from the forest before sunset.\n")
     time.sleep(2)
     print(f"{Fore.YELLOW}{Style.BRIGHT}Press C to continue the game and Q to quit")
     answer = input("").lower().strip()
@@ -152,8 +152,9 @@ def two_paths():
     elif answer == "2":
         clear_terminal()
         print(f"{Fore.CYAN}\nThis is a good choice. Now let's see where it takes you")
-        time.sleep(2)
-        meet_stag()
+        time.sleep(5)
+        clear_terminal
+        meet_deer()
     else:
         #Let user know the answer is incorrect
         clear_terminal()
@@ -167,7 +168,7 @@ def two_paths():
         elif answer == "2":
             print(f"{Fore.CYAN}This is a great choice, let's see who you're going to meet this time")
             time.sleep(2)
-            meet_stag()
+            meet_deer()
         else:
             #Lets user know the answer is incorrect and takes them to start_game()
             print(f"{Fore.RED}This is an incorrect answer.")
@@ -220,12 +221,12 @@ def meet_fairy():
             start_game()
 
 
-def meet_stag():
+def meet_deer():
     print(f"{Fore.CYAN}You carefully walk down the mountains")
     print(f"{Fore.CYAN}And then up again until you come to a waterfall")
     time.sleep(2)
     print(f"{Fore.CYAN}You go there to drink some water")
-    print(f"{Fore.CYAN}You notice a stag on top of the waterfall")
+    print(f"{Fore.CYAN}You notice a deer on top of the waterfall")
     time.sleep(2)
 
     print(Fore.CYAN + """
@@ -254,11 +255,10 @@ def meet_stag():
              |_||_|           |_|   |_|
             /_//_/           /_/   /_/ 
 
-
     """)
     print(f"{Fore.CYAN}You know these are ellusive animals")
     print(f"{Fore.CYAN}And take this as a good omen")
-    print(f"{Fore.CYAN}The stag gets near to you and leads you to a green valley")
+    print(f"{Fore.CYAN}The deer gets near to you and leads you to a green valley")
 
 
 
