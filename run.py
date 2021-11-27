@@ -84,6 +84,7 @@ def start_game():
             """
             print(f"{Fore.RED}This is an incorrect answer.")
             print(f"{Fore.CYAN}Taking you to the beginning of the game")
+            time.sleep(4)
             start_game()
         
         
@@ -139,6 +140,7 @@ def game_intro():
             #Lets user know the answer is incorrect and takes them to start_game()
             print(f"{Fore.RED}This is an incorrect answer.")
             print("Taking you to the beginning of the game")
+            time.sleep(4)
             start_game()
         
 
@@ -186,6 +188,7 @@ def two_paths():
             #Lets user know the answer is incorrect and takes them to start_game()
             print(f"{Fore.RED}This is an incorrect answer.")
             print(f"{Fore.CYAN}Taking you to the beginning of the game.")
+            time.sleep(4)
             start_game()
 
 
@@ -231,6 +234,7 @@ def meet_fairy():
             print(f"{Fore.RED}This is an incorrect answer.")
             time.sleep(2)
             print(f"{Fore.RED}Taking you to the beginning of the game.")
+            time.sleep(4)
             start_game()
 
 
@@ -275,16 +279,76 @@ def meet_deer():
     time.sleep(2)
     print(f"{Fore.CYAN}You know these are ellusive animals")
     print(f"{Fore.CYAN}And take this as a good omen")
-    print(f"{Fore.CYAN}The deer gets near to you and leads you to a green valley")
+    time.sleep(2)
+    print(f"{Fore.CYAN}The deer gets closer to you")
+    print(f"{Fore.CYAN}And stands on its hind legs as a sign for you to follow it")
 
     input(f"{Fore.YELLOW}{Style.BRIGHT}Press 'enter' to see where the deer leads you.\n").lower().strip()
     time.sleep(2)
-    print(f"{Fore.CYAN}The deer takes you out of the valley and into the forest")
+    print(f"{Fore.CYAN}The deer leads you out of the valley and into the forest")
     print(f"{Fore.CYAN}And leaves you near a tall old oak tree")
+    time.sleep(2)
     print(f"{Fore.CYAN}You see a marking on its trunk")
-    print(f"{Fore.CYAN}Showing you two roads")
-    
+    print(f"{Fore.CYAN}Indicating two roads")
+    time.sleep(2)
+    print(f"{Fore.CYAN}Option #1 - the first road leads to a river")
+    print(f"{Fore.CYAN}You know this is the same river that flows near your village")
+    print(f"{Fore.CYAN}Option #2 - the second road leads you to a horse")
 
+    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Which do you chose - 1 or 2?\n")
+    if answer == "1":
+        clear_terminal()
+        print(f"{Fore.RED}This is a bad choice")
+        print(f"{Fore.RED}It's too long for you to walk home\n")
+        time.sleep(2)
+        print(f"{Fore.RED}You soon get too tired")
+        print(f"{Fore.RED}And are unable to walk home")
+        print(f"{Fore.RED}You lose the game")
+        game_over()
+        play_again()
+    elif answer == "2":
+        clear_terminal()
+        print(f"{Fore.CYAN}This is a great choice!")
+        print(f"{Fore.CYAN}You hop on the horse\n")
+        time.sleep(2)
+        print(f"{Fore.CYAN}And go back to the river")
+        print(f"{Fore.CYAN}You reach your house before sunset")
+        print(f"{Fore.CYAN}You reunite with your family who are happy to see you!")
+        win_game()
+        time.sleep(2)
+        play_again
+    else:
+        #Let user know the answer is incorrect
+        clear_terminal()
+        print(f"{Fore.RED}This is an incorrect answer")
+        time.sleep(2)
+        answer = input(f"{Fore.RED}You need to type 1 or 2.\n")
+        if answer == "1":
+            clear_terminal()
+            print(f"{Fore.RED}This is a bad choice")
+            print(f"{Fore.RED}It's too long for you to walk home")
+            print(f"{Fore.RED}You soon get too tired")
+            print(f"{Fore.RED}And are unable to walk home")
+            print(f"{Fore.RED}You lose the game")
+            game_over()
+            play_again()
+        elif answer == "2":
+            clear_terminal()
+            print(f"{Fore.CYAN}This is a great choice!")
+            print(f"{Fore.CYAN}You hop on the horse")
+            print(f"{Fore.CYAN}And go back to the river")
+            print(f"{Fore.CYAN}You reach your house before sunset")
+            print(f"{Fore.CYAN}You reunite with your family who are happy to see you!")
+            win_game()
+            time.sleep(2)
+            play_again
+        else:
+            #Lets user know the answer is incorrect and takes them to start_game()
+            print(f"{Fore.RED}This is an incorrect answer.")
+            time.sleep(2)
+            print(f"{Fore.RED}Taking you to the beginning of the game.")
+            time.sleep(4)
+            start_game()
 
 def meet_redhead_woman():
     print(f"{Fore.CYAN}The fairy brings you to a clearing in the forest")
@@ -293,8 +357,8 @@ def meet_redhead_woman():
     time.sleep(2)
     print(f"{Fore.CYAN}But you get hungry and thristy.")
     print(f"{Fore.CYAN}Now you hear water flowing in the distance")
-    print(f"{Fore.CYAN}You walk toweards that direction")
-    print(f"{Fore.CYAN}And you find a river and drink water from it.\n")
+    print(f"{Fore.CYAN}You walk towards that direction")
+    print(f"{Fore.CYAN}You find a stream and drink water from it.\n")
     time.sleep(2)
     print(f"{Fore.CYAN}You see a young woman with long red hair")
     print(f"{Fore.CYAN}She's holding a basket with fruits and meat pies in it")
@@ -334,6 +398,7 @@ def meet_redhead_woman():
             print(f"{Fore.RED}This is an incorrect answer.")
             time.sleep(2)
             print(f"{Fore.RED}Taking you to the beginning of the game.")
+            time.sleep(4)
             start_game()
 
 
@@ -414,6 +479,7 @@ ______________|_d|_|b____
             print(f"{Fore.RED}This is an incorrect answer.")
             time.sleep(2)
             print(f"{Fore.RED}Taking you to the beginning of the game.")
+            time.sleep(4)
             start_game()
 
     
