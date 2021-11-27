@@ -80,11 +80,11 @@ def start_game():
 def game_intro():
     print(f"{Fore.CYAN}\nThe year is 1290, you are on the outskirts of the forest")
     time.sleep(2)
-    print(f"{Fore.MAGENTA}You are picking mushrooms and berries")
+    print(f"{Fore.CYAN}You are picking mushrooms and berries")
     time.sleep(2)
-    print(f"{Fore.LIGHTCYAN_EX}You are going further into the forest") 
+    print(f"{Fore.CYAN}You are going further into the forest") 
     time.sleep(2)
-    print(f"{Fore.LIGHTBLUE_EX}And you are straying away from your village")
+    print(f"{Fore.CYAN}And you are straying away from your village")
     time.sleep(2)
     print(f"{Fore.CYAN}After two hours, you want to go back home")
     time.sleep(2)
@@ -353,7 +353,7 @@ ______________|_d|_|b____
 
     
 
-
+#This function is run when user decides to quit the game or when they lose the game
 def game_over():    
     print(Fore.RED + Style.BRIGHT + """
     _____                                            _ 
@@ -365,7 +365,7 @@ def game_over():
 
     """)
                                                       
-                                                      
+#This function is run when game is over regardless of whether user wins or not                                                      
 def play_again():
     answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Do you want to play again?\n Y / N\n").lower()
     if answer == "y":
