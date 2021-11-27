@@ -2,9 +2,12 @@ import time
 import os 
 
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Back, Style, init
+from sys import stdout
+init()
 colorama.init()
 
+stdout.write(Fore.RED + Style.BRIGHT + "Test" + Style.RESET_ALL + "\n")
 
 def clear_terminal():
     """
