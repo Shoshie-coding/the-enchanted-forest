@@ -71,6 +71,16 @@ The main issue I've noticed is with the Colorama colors, there are usually not d
 - I've tried changing import code as per this - [Stack Overflow article](https://stackoverflow.com/questions/9848889/colorama-for-python-not-returning-colored-print-lines-on-windows) however this was not successful.
 
 ## **Deployment**
+To deploy my website to Heroku, I've taken the following stps:
+- Go to https://dashboard.heroku.com/apps
+- Create an account
+- From the Heroku dashboard click the “Create new app” button 
+- Name app 'the-enchanted-forest'
+- Go to Settings - under Config Vars set Key to PORT and VALUE to 8000
+- Add buildpacks Python and Node.js and save after each
+- Go to Deploy - chose automatic deployment 
+- Notice message 'App was successfully deployed'
+- Click on Open app button to open the newly deployed app
 
 ## ** Credits**
 ### **Coding Tutorials**
@@ -78,6 +88,7 @@ The main issue I've noticed is with the Colorama colors, there are usually not d
 
 - [Simple Python Project | Text-Based Adventure Game: Time Unraveled] (https://www.youtube.com/watch?v=ypNFNr72Xe8&list=PLeh6WLy2bEMGGBIU4y-aKyqJ-gIbIZfSU&index=8&t=2439s)
 - [Choose Your Own Adventure Game in Python (Beginners)] (https://www.youtube.com/watch?v=DEcFCn2ubSg&list=PLeh6WLy2bEMGGBIU4y-aKyqJ-gIbIZfSU&index=6&t=1s)
+- Code for clearing the terminal was taken from [Stack Overflow] (https://stackoverflow.com/questions/517970/how-to-clear-the-interpreter-console)
 
 ### **Ascii art**
 The Ascii text art was taken from the following sources

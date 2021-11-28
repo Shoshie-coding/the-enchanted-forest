@@ -10,7 +10,6 @@ def clear_terminal():
     """
     Code for clearing the terminal
     Credit to Stack Overflow 
-    https://stackoverflow.com/questions/517970/how-to-clear-the-interpreter-console
     """ 
     os.system('cls' if os.name == 'nt' else 'clear')
 
