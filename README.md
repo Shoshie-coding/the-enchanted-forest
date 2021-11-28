@@ -53,6 +53,9 @@ The start_game function gives way to the game_intro and from this the other 5 ma
 Each of these 5 functions represent a scenario where 
 Each function has conditional statements to manage error and exception handling to guide the user to an appropiate answer of his choice. 
 I've started planning for this game using a flowchart to help me create the flow and logic of the game functions. 
+![Flowchart 1](assets/images/Flowchart-the-enchanted-forest-1.png)
+![Flowchart 2](assets/images/Flowchart-the-enchanted-forest-2.png)
+
 
 
 ## **Testing**
