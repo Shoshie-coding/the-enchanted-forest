@@ -118,7 +118,6 @@ def game_intro():
         clear_terminal()
         print(f"{Fore.CYAN}Great, you're brave enough to continue the game!")
         two_paths()
-
     elif answer == "q":
         print(f"{Fore.CYAN}Sorry to see you go!")
         game_over()  
@@ -400,7 +399,7 @@ def meet_redhead_woman():
     print(f"{Fore.CYAN}Thinking of the best way")
     print(f"{Fore.CYAN}To get home to your village.\n")
     time.sleep(2)
-    print(f"{Fore.CYAN}But you get hungry and thristy.")
+    print(f"{Fore.CYAN}But you get hungry and thirsty.")
     print(f"{Fore.CYAN}Now you hear water flowing in the distance")
     print(f"{Fore.CYAN}You walk towards that direction")
     print(f"{Fore.CYAN}You find a stream and drink water from it.\n")
