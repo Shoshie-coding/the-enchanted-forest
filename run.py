@@ -495,7 +495,7 @@ ______________|_d|_|b____
     print(f"{Fore.CYAN}And there all kinds of wild animals waking up to hunt")
 
     answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Which option do you chose")
-    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Type 1 or 2")
+    print(f"{Fore.YELLOW}{Style.BRIGHT}Type 1 or 2\n")
 
     if answer == "1":
         print(f"{Fore.CYAN}Great choice!")

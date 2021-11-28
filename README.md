@@ -27,6 +27,16 @@ On the second part of the welcome screen, users are asked to confirm if they wan
 Throughout the game, I've included several error and exception handling features that notifies users when they made a wrong input and give them the option to make a correct input, otherwise they're sent to the beginning of the game. 
 ![Error handling](assets/images/error-handling-feature.png) 
 
+- **Colorama styles**
+- I've implemented the Colorama module to make the screen more user friendly and to provide a visual feedback for the User.
+For the main story lines I've chosen CYAN color.
+When User input is requested, I've used Bright Yellow, that contrasts with the other colors and it catches User attention to focus on the task at hand. 
+For the game_over function, I've selected red color
+For the win_game function, I've selected Magenta color. 
+
+
+
+
 
 
 
