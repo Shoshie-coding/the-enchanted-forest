@@ -105,7 +105,7 @@ def game_intro():
     print(f"{Fore.CYAN}Now you need to find a way out before the sun sets\n")
     print(f"{Fore.CYAN}You know it's not safe to be in the forest at night")
     print(f"{Fore.CYAN}This is when the forest comes alive!")
-    print(f"{Fore.CYAN}And all kinds of creatures lurk around")
+    print(f"{Fore.CYAN}And all kinds of creatures start lurking around")
     time.sleep(2)
     print(f"{Fore.CYAN}Follow the prompts on the screen to play this game\n")
     print(f"{Fore.CYAN}And see if you can escape")
