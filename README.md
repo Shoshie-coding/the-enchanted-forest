@@ -91,7 +91,7 @@ The Ascii text art was taken from the following sources
 https://patorjk.com/software/taag/#p=display&f=Standard&t=Discover%20a%20t
 
 ## **Acknoledgments**
-I want to thank my mentor for guidance, tutors for clarifying many questions regarding coding with Python and everyone at Code Institute who provided helpful tips along the way.
+I want to thank my mentor for guidance, tutors for answering my many questions regarding coding with Python and everyone at Code Institute who provided helpful tips along the way.
 
 
 

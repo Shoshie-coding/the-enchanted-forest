@@ -222,9 +222,9 @@ def meet_fairy():
     print(f"{Fore.CYAN}But you you see a big torch on the ground\n")
     print(f"{Fore.CYAN}You have two options now")
     print(f"{Fore.CYAN}Option #1 pick up the torch and find your way home")
-    print(f"{Fore.CYAN}Option #2 let the fairy guide you trhough the forest")
+    print(f"{Fore.CYAN}Option #2 let the fairy guide you through the forest")
 
-    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}\nWhich will you chose: 1 or 2?")
+    answer = input(f"{Fore.YELLOW}{Style.BRIGHT}\nWhich will you chose: 1 or 2?\n")
     clear_terminal()
     if answer == "1":
         print(f"{Fore.RED}This is an unfortunate choice.")
@@ -411,7 +411,6 @@ def meet_redhead_woman():
     print(f"{Fore.CYAN}You also see a beehive with honey")
     print(f"{Fore.CYAN}In the tree besides you.\n")
     print(f"{Fore.CYAN}You know have two options\n")
-    print(f"{Fore.CYAN}In the tree besides you.\n") 
     print(f"{Fore.CYAN}Option #1 - eat what's in the basket")
     print(f"{Fore.CYAN}Option #2 - eat the honey.")
     answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Which do you chose: 1 or 2?\n")
