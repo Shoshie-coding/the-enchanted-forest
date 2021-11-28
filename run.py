@@ -1,7 +1,7 @@
 import time 
 import os 
 import colorama
-from colorama import Fore, Style 
+from colorama import Fore, Style, Back
 
 colorama.init(autoreset=True)
 
@@ -69,7 +69,7 @@ def start_game():
         Let user know the answer is incorrect
         """
         clear_terminal()
-        print(f"{Fore.RED}This is an incorrect answer")
+        print(f"{Fore.WHITE}{Back.RED}This is an incorrect answer")
         time.sleep(2)
         answer = input(f"{Fore.RED}You need to type S or E.\n")
         if answer == "s":
