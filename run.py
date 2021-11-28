@@ -71,7 +71,7 @@ def start_game():
         clear_terminal()
         print(f"{Fore.WHITE}{Back.RED}This is an incorrect answer")
         time.sleep(2)
-        answer = input(f"{Fore.RED}You need to type S or E.\n")
+        answer = input(f"{Fore.WHITE}{Back.RED}You need to type S or E.\n")
         if answer == "s":
             print(f"{Fore.CYAN}You made the right choice!") 
             clear_terminal()
@@ -84,7 +84,7 @@ def start_game():
             """
             Let user know the answer is incorrect
             """
-            print(f"{Fore.RED}This is an incorrect answer.")
+            print(f"{Fore.WHITE}{Back.RED}This is an incorrect answer.")
             print(f"{Fore.CYAN}Taking you to the beginning of the game")
             time.sleep(4)
             start_game()      
@@ -129,9 +129,9 @@ def game_intro():
         is incorrect
         """
         clear_terminal()
-        print(f"{Fore.RED}This is an incorrect answer")
+        print(f"{Fore.WHITE}{Back.RED}This is an incorrect answer")
         time.sleep(2)
-        answer = input(f"{Fore.RED}You need to type C or Q.\n")
+        answer = input(f"{Fore.WHITE}{Back.RED}You need to type C or Q.\n")
         if answer == "c":
             time.sleep(2)
             clear_terminal()
@@ -146,7 +146,7 @@ def game_intro():
             Lets user know the answer is incorrect
             and takes them to start_game()
             """
-            print(f"{Fore.RED}This is an incorrect answer.")
+            print(f"{Fore.WHITE}{Back.RED}This is an incorrect answer.")
             print("Taking you to the beginning of the game")
             time.sleep(4)
             start_game()       
@@ -188,9 +188,9 @@ def two_paths():
         Lets user know the answer is incorrect
         """
         clear_terminal()
-        print(f"{Fore.RED}This is an incorrect answer")
+        print(f"{Fore.WHITE}{Back.RED}This is an incorrect answer")
         time.sleep(2)
-        answer = input(f"{Fore.RED}You need to type 1 or 2.\n")
+        answer = input(f"{Fore.WHITE}{Back.RED}You need to type 1 or 2.\n")
         if answer == "1":
             print(f"{Fore.CYAN}You made the right choice!") 
             time.sleep(2)
@@ -205,7 +205,7 @@ def two_paths():
             Lets user know the answer is incorrect
             And takes them to start_game()
             """
-            print(f"{Fore.RED}This is an incorrect answer.")
+            print(f"{Fore.WHITE}{Back.RED}This is an incorrect answer.")
             print(f"{Fore.CYAN}Taking you to the beginning of the game.")
             time.sleep(4)
             start_game()
@@ -227,9 +227,9 @@ def meet_fairy():
     answer = input(f"{Fore.YELLOW}{Style.BRIGHT}\nWhich will you chose: 1 or 2?")
     clear_terminal()
     if answer == "1":
-        print(f"{Fore.RED}This is an unfortunate choice.")
-        print(f"{Fore.RED}You cannot survive alone in the forest")
-        print(f"{Fore.RED}You meet a bear and wrestle with him and die")
+        print(f"{Fore.WHITE}{Back.RED}This is an unfortunate choice.")
+        print(f"{Fore.WHITE}{Back.RED}You cannot survive alone in the forest")
+        print(f"{Fore.WHITE}{Back.RED}You meet a bear and wrestle with him and die")
         time.sleep(2)
         game_over()
         time.sleep(2)
@@ -244,13 +244,13 @@ def meet_fairy():
         Let user know the answer is incorrect
         """
         clear_terminal()
-        print(f"{Fore.RED}This is an incorrect answer")
+        print(f"{Fore.WHITE}{Back.RED}This is an incorrect answer")
         time.sleep(2)
-        answer = input(f"{Fore.RED}You need to type 1 or 2.\n")
+        answer = input(f"{Fore.WHITE}{Back.RED}You need to type 1 or 2.\n")
         if answer == "1":
-            print(f"{Fore.RED}This is an unfortunate choice")
-            print(f"{Fore.RED}You cannot survive alone in the forest")
-            print(f"{Fore.RED}You meet a bear and wrestle with him and die")
+            print(f"{Fore.WHITE}{Back.RED}This is an unfortunate choice")
+            print(f"{Fore.WHITE}{Back.RED}You cannot survive alone in the forest")
+            print(f"{Fore.WHITE}{Back.RED}You meet a bear and wrestle with him and die")
             print()
             game_over()
             play_again()
@@ -266,9 +266,9 @@ def meet_fairy():
             Lets user know the answer is incorrect 
             And takes them to start_game()
             """
-            print(f"{Fore.RED}This is an incorrect answer.")
+            print(f"{Fore.WHITE}{Back.RED}This is an incorrect answer.")
             time.sleep(2)
-            print(f"{Fore.RED}Taking you to the beginning of the game.")
+            print(f"{Fore.CYAN}Taking you to the beginning of the game.")
             time.sleep(4)
             start_game()
 
@@ -335,12 +335,12 @@ def meet_deer():
     answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Which do you chose: 1 or 2?\n")
     if answer == "1":
         clear_terminal()
-        print(f"{Fore.RED}This is a bad choice")
-        print(f"{Fore.RED}It's too long for you to walk home\n")
+        print(f"{Fore.WHITE}{Back.RED}This is a bad choice")
+        print(f"{Fore.RED}{Back.RED}It's too long for you to walk home\n")
         time.sleep(2)
-        print(f"{Fore.RED}You soon get too tired")
-        print(f"{Fore.RED}And are unable to walk home")
-        print(f"{Fore.RED}You lose the game")
+        print(f"{Fore.RED}{Back.RED}You soon get too tired")
+        print(f"{Fore.RED}{Back.RED}And are unable to walk home")
+        print(f"{Fore.RED}{Back.RED}You lose the game")
         game_over()
         play_again()
     elif answer == "2":
@@ -360,16 +360,16 @@ def meet_deer():
         Let user know the answer is incorrect
         """
         clear_terminal()
-        print(f"{Fore.RED}This is an incorrect answer")
+        print(f"{Fore.RED}{Back.RED}This is an incorrect answer")
         time.sleep(2)
-        answer = input(f"{Fore.RED}You need to type 1 or 2.\n")
+        answer = input(f"{Fore.RED}{Back.RED}You need to type 1 or 2.\n")
         if answer == "1":
             clear_terminal()
-            print(f"{Fore.RED}This is a bad choice")
-            print(f"{Fore.RED}It's too long for you to walk home")
-            print(f"{Fore.RED}You soon get too tired")
-            print(f"{Fore.RED}And are unable to walk home")
-            print(f"{Fore.RED}You lose the game")
+            print(f"{Fore.RED}{Back.RED}This is a bad choice")
+            print(f"{Fore.RED}{Back.RED}It's too long for you to walk home")
+            print(f"{Fore.RED}{Back.RED}You soon get too tired")
+            print(f"{Fore.RED}{Back.RED}And are unable to walk home")
+            print(f"{Fore.RED}{Back.RED}You lose the game")
             game_over()
             play_again()
         elif answer == "2":
@@ -388,9 +388,9 @@ def meet_deer():
             Lets user know the answer is incorrect
             And takes them to start_game()
             """
-            print(f"{Fore.RED}This is an incorrect answer.")
+            print(f"{Fore.RED}{Back.RED}This is an incorrect answer.")
             time.sleep(2)
-            print(f"{Fore.RED}Taking you to the beginning of the game.")
+            print(f"{Fore.RED}{Back.RED}Taking you to the beginning of the game.")
             time.sleep(4)
             start_game()
 
@@ -416,10 +416,10 @@ def meet_redhead_woman():
     print(f"{Fore.CYAN}Option #2 - eat the honey.")
     answer = input(f"{Fore.YELLOW}{Style.BRIGHT}Which do you chose: 1 or 2?\n")
     if answer == "1":
-        print(f"{Fore.RED}This is a bad choice.")
-        print(f"{Fore.RED}The readhead woman transforms into a witch.")
-        print(f"{Fore.RED}The food from the basket was poisoned")
-        print(f"{Fore.RED}You soon get sick and die")
+        print(f"{Fore.RED}{Back.RED}This is a bad choice.")
+        print(f"{Fore.RED}{Back.RED}The readhead woman transforms into a witch.")
+        print(f"{Fore.RED}{Back.RED}The food from the basket was poisoned")
+        print(f"{Fore.RED}{Back.RED}You soon get sick and die")
         game_over()
         play_again()
 
@@ -434,14 +434,14 @@ def meet_redhead_woman():
         Let user know the answer is incorrect
         """
         clear_terminal()
-        print(f"{Fore.RED}This is an incorrect answer")
+        print(f"{Fore.RED}{Back.RED}This is an incorrect answer")
         time.sleep(2)
-        answer = input(f"{Fore.RED}You need to type 1 or 2.\n")
+        answer = input(f"{Fore.RED}{Back.RED}You need to type 1 or 2.\n")
         if answer == "1":
-            print(f"{Fore.RED}This is a bad choice.")
-            print(f"{Fore.RED}The readhead woman transforms into a witch.")
-            print(f"{Fore.RED}The food from the basket was poisoned")
-            print(f"{Fore.RED}You soon get sick and die")
+            print(f"{Fore.RED}{Back.RED}This is a bad choice.")
+            print(f"{Fore.RED}{Back.RED}The readhead woman transforms into a witch.")
+            print(f"{Fore.RED}{Back.RED}The food from the basket was poisoned")
+            print(f"{Fore.RED}{Back.RED}You soon get sick and die")
             game_over()
             play_again()
         elif answer == "2":
@@ -454,9 +454,9 @@ def meet_redhead_woman():
             Lets user know the answer is incorrect
             And takes them to start_game()
             """
-            print(f"{Fore.RED}This is an incorrect answer.")
+            print(f"{Fore.RED}{Back.RED}This is an incorrect answer.")
             time.sleep(2)
-            print(f"{Fore.RED}Taking you to the beginning of the game.")
+            print(f"{Fore.RED}{Back.RED}Taking you to the beginning of the game.")
             time.sleep(4)
             start_game()
 
@@ -511,12 +511,12 @@ ______________|_d|_|b____
         play_again
 
     elif answer == "2":
-        print(f"{Fore.RED}This is a bad choice.")
-        print(f"{Fore.RED}It's not a good idea")
-        print(f"{Fore.RED}To walk alone in the forest when it's dark.")
-        print(f"{Fore.RED}You thank the knight for the instructions")
-        print(f"{Fore.RED}And bid him farewell")
-        print(f"{Fore.RED}But a poisonous snake bites you and you die")
+        print(f"{Fore.RED}{Back.RED}This is a bad choice.")
+        print(f"{Fore.RED}{Back.RED}It's not a good idea")
+        print(f"{Fore.RED}{Back.RED}To walk alone in the forest when it's dark.")
+        print(f"{Fore.RED}{Back.RED}You thank the knight for the instructions")
+        print(f"{Fore.RED}{Back.RED}And bid him farewell")
+        print(f"{Fore.RED}{Back.RED}But a poisonous snake bites you and you die")
         game_over()
         play_again()
     else:
@@ -524,16 +524,16 @@ ______________|_d|_|b____
         Let user know the answer is incorrect
         """
         clear_terminal()
-        print(f"{Fore.RED}This is an incorrect answer")
+        print(f"{Fore.RED}{Back.RED}This is an incorrect answer")
         time.sleep(2)
-        answer = input(f"{Fore.RED}You need to type 1 or 2.\n")
+        answer = input(f"{Fore.RED}{Back.RED}You need to type 1 or 2.\n")
         if answer == "1":
-            print(f"{Fore.RED}This is a bad choice.")
-            print(f"{Fore.RED}It's not a good idea to walk alone")
-            print(f"{Fore.RED}In the forest when it's dark.")
-            print(f"{Fore.RED}You thank the knight for the instructions")
-            print(f"{Fore.RED}And bid him farewell")
-            print(f"{Fore.RED}But a poisonous snake bites you and you die")
+            print(f"{Fore.RED}{Back.RED}This is a bad choice.")
+            print(f"{Fore.RED}{Back.RED}It's not a good idea to walk alone")
+            print(f"{Fore.RED}{Back.RED}In the forest when it's dark.")
+            print(f"{Fore.RED}{Back.RED}You thank the knight for the instructions")
+            print(f"{Fore.RED}{Back.RED}And bid him farewell")
+            print(f"{Fore.RED}{Back.RED}But a poisonous snake bites you and you die")
             game_over()
             play_again()
         elif answer == "2":
@@ -553,9 +553,9 @@ ______________|_d|_|b____
             Lets user know the answer is incorrect
             And takes them to start_game()
             """
-            print(f"{Fore.RED}This is an incorrect answer.")
+            print(f"{Fore.RED}{Back.RED}This is an incorrect answer.")
             time.sleep(2)
-            print(f"{Fore.RED}Taking you to the beginning of the game.")
+            print(f"{Fore.RED}{Back.RED}Taking you to the beginning of the game.")
             time.sleep(4)
             start_game()
 
